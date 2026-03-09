@@ -1,0 +1,2723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFM FabLab — Réservation</title>
+<style>
+@font-face {
+  font-family: 'IFMParis';
+  src: url("data:font/woff2;base64,d09GMk9UVE8AAD9MAAsAAAAAV4gAAD79AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAADfgzG5tAHINyBmAAiB4BNgIkA4diBAYFg3sHIBu/VhWy85Fx2wBCzi9G73AEMfMjiOmW/f8Zoog4Oc561gNkgikgU2hYBFgAgAfgAD5+Am8mMBdI8GUG47vcA8AAr/CGsVtKB7/VWqVTSs+W5YbhNboBbgAGIpE3AyLOA8OAhbKy0ECDi0DyxoQnCKzLB+cPk0fOb+Fc4BxQAACAf8AhSdHk+e/H/rf2ue/fj5iUSFWZLmLNJTOdISQSiVLwRIJQyNc2R7GJyAuXNka3LHTDTHupmqdRw5I+5TJ/aYXIWMEF/ICcMn0DsEW8hSqmS2wUf4r+C122KkuXCIVDdQ3WIBlkjMZYmNJZhuRTELQ7XmVSNKlTpfrUKdM9AB7LPtmWZRSiCV8GDDBUiL6f858nf/P/zR9nxj/n/fnvM+/wDby5F9BObOUhloilBbCjghDEhgSx3kuoeu0YLO2KhWtDO81gadjAGrCn8IyR1L7OZQ/J8DS3f9eL292iqLHBGHNUjZQcowURJLRJURGUFguQKBujMD/yFQuxElCxAhUxCivgi36m/ueqs0g1f3u1ku7r7nVuxQy1ZJhgIeKEECIGEWQsQYdiCKIJ6hn3FZ9VOX9wfQKtKQj/6pmkUDptW2EbbPxQagT/369tEbsV0dMYUidRkmlmSFap0Sspv/0yWwD/8NXfXjVzsDNJLR8Fn+P4cxwn4quyA5U4juNxfB6Pz9PO5/+fTl2/QgVS2WPaKe1E+6KTS6fiheWgoaDYhbPS9ywVV6C3d9g6ddh8dkGnks/wnlU+l1DplGXvMA7uCOx/LWuW5pMVjUpZXRaOmJyc6emZpe9dX8hdTUpzS27ycrWJkLJKColcQgoKiUJYCqEQ0lFATRsxtvl3F+ChMd4Nw/MgNjer/O/2fjWJS93X3dV5uS/peiIiJUgIwX315r46PSQmJcd/u46vbkHJRveYcgsqIQ9s+aeBADTkBQ9J0WEDEhn2GC73sd9bMr5vvsafB78N79g6yQRmxj8pGJKQETNWnHjyFyZWsmkyzVGgxFIrbLDdHoedds0Dr3z2NzjEjUE08dy/Dw+fiplpehU8B1QZi1XCeFnsWxnaKL4nK8l67aGhP2S0GyZwQO5PIKWNT3uZDEdB9u7lpW3euqh4TY+yCvS9yg7/MrRJERz1mWzR7DbM4h9VyQE5IcTsOI5gmBSGe5FIGnNXtbhbpZzaUpKUZNGwkelIgQpLHSEOMSL7OBqYAiVLB6qyVa9H70e0WHmUfv/lCB2ZEaeY2hrGHcHw8LcWED987ZA2B/X4Fq5NRRiHuCQ40clJYRbHSi/jzPJcOrfieE/zHJ8rc2deLY6wkZQ9LJFkspSLvLRA+7RXN3THNCa0hR3tYX8XOuidPu1z7vEd/8ERnB9xZPFPcrKiS1X2ZUW2pSUHcyxnczE9eZmv+BABE+dvAYeQo8QOV3yIohAFFjwEqWYN22mlg1NcoIvb9PKST/y6+Zf4k6G1/EfL11r+q2Voy3Ytw1t2a9krGswHztb6HGtkOkb20MMtUoy+KzyOLNwp8Rahs6X3g/fsc84Y3BiOH/7E2V0v3aRLDihaY0YdFM05KTRHTblTyVYEDFaYHnGf8pBcFukVXN3qVv3XuEAxpVXyl8qU/wg5pqmtsV0xOLpDdTq7Fd8fABE49c85Ywc2drVoi0b2PbqSDXn2/w6eDkM7u8a62PmwhfpcwaJd9ub6OM7a6AZp6NjnD+rdqESN7qk97XioAtw7+5cOJ9Oq354qsNqb/FfIpu5Kjs8bdKLFnp7hsmwXHdJ3uCn1IOtroWUkoJdab6u7hWQYd1jZ2Q2Owrl44fa07gLGySD07q9jnQsOe07efx1A9Ht4mxvOI1O6c9Mg66oP0Dm5Ylc3nfyooxXptX664cjfdCVk3if0Mu1Z/syZHpLTZmt5nx47MTVPEN9kqauTC1e5m41KyLro5su5mHFIyZikKlu/KkVvAeLeG/DrgXLRaqNNy7G08gJLDmLqjaMdvkFu3cEZOTfnPbSTsvP4bKfWyWK9dcMv72gxytvJH32zPxJBCJaeiiwZD8QQHzSu+Mk0ml0WkOTAR5dOLn6BPqlTpMzRvakd8jLYJ+WtZCVxq+X+UkRu/UBgNuRVvz24QUvKR9oz8KfeMY/sdo6r5TW4pUuvojV2F//u3rm/fYupDe//ZvHTMykJdtxP/ouRwXuOGl06Rt/pD/jFQ0DJGZ+mA/jLxcvvX1AtvnLaSfybyuBJxYl6WFd+4vQ4KTrW5NsQ7Kfxr6vtNeXV2JnJKZXtbmOLAg0cL07JmdJcT6M/TVZ+m3gu7cmgkB7DmanDaPLid0exCHKfdFoROYGTslkE3O8+4LFeOnZrUT2hW6A5oUzIwtq5NfbFjoct1m/Y0kUFdU/5un3wovLK5QQ+GNTd3Ljx/qkqicVr0zcE05ktlPWjsjk/xpoOSgCGVwvXGY/taXlv6fiZmKjoeJPvQHA/HHbv4IrSFxbQhqwTY54IGjQzJ1lPsjXyQBkiYd96oKudtQd4XTfVFn4X/M3dQzdu5G0mOqedPM3/rmb1veuSlSd6TJE8u9ppIIMm1pgv72+18nWF2LNNZw99hBqvF78uNuvFNnola748D/YbI37AYd7uFvu/xGZ6YS82Orx46FywWX9/afrF48qpZBqhmrUeDd2vjD0zOxrLydKoc5ooW1twzV56KBzkx4FntB9OnPz0CAGvQXl+Mdp/Az6ZcqRf13HpdzmiI3u/mrt4fla053hXHMDH93X52SCyoEOr/FpOzX18PCE6Uhkrq5WnQXwexzc41GRLapVx86tOujkyEye22mJ1pGill6idBWyJr2m5DDKt8tzYncP3b2oyJmlRWruyHHZ76810FXFr1X45Sla3HThFUQZ/DjLm3T6pOp/VQChb63f2rTMNRy9yhMPgx7X6OSt5KRU7H1zhYHwQMaZyDEov5SMF3Uo1nX7OJ34gCrUcL6tQMeCBCo5ObZm9JiBDS9a6QvdOTr6xj16wXX9Ppg0XQkwbG4tNzLZvliiYqn5ycXDaIHcf0BtqD/eqbhai2GtV4eKXKKRV+8RbS6totsWrr5cJc/nboVOMyJUjsaGVVU3sGXx1sfB+J0VPx4a/kt8eynZQ7oQrCpPh7QZJmM0AWGEfGoX3ZIREXs30ITSXn9bsrrdDxrerOUyh0P8qWoRGCVOHV8heXkDz1SJComBApb22RoGpWnMi9s0kNSIt1GtQgJ10f53z1LRI1quQLIbeQ+hUsig/w5uEmD+CPznLKagkMoEHx8DI8zoDljxJ5LEobGCqsusk72uHMZsF3sazMItS5GRkUUl6dUCO0lWtXedp4XZsrVdP6hDg2rV/DSqjToU4RyRs1Bsac/xaUkrY3edH21YbjMvgLBVLjFQShUpjUoXAZKwQDjyuxFBgprmmhuxSAnHqI347eIyz22jzilvt6WNwcaf2FFM1NhMghAsSo+xjIWW/JpTkorgE9qVepmzXGK8RIZME5EnesSxoLWtqOZqPmpvcWLip+TkMym5CJbYrj5dqNNgrUYpp/8geynpZ2D0SsKB9OfuNIeJlv6ZPW7s/mPnIQ8nlswK/miVsNSwGS4CxUz29QVPyFv7utrRqAYzRnqXNZyYsmxmj2vDYEb1WJpkEBlxkRo64KjU06oHhJ7IxW7E8naFu1eZXKVzZaMExL/+bS+vfh2gNC+xrMbKbyAOlgcAJQun6j1Jl2eBcBjCTEsriY5a5IOHR1mW6dntRjO+FhJYzbL7FLQioF5Hm33gJC9YAOs05XdaSW52jaTzXP8B72spGja1Z1P/kpVK/TGbi2XtbV6Xaphq5qZP5N/P5r7ELEFa85DHEkfiBWc3UWsxRitUYtrswabOfJ6uVIpxd7tjHErbHoVjaK3L89ZrnUcTkiyzo6DsHctqJV2NYiODznEPAVRb9/KRURjgM2MT+h1GjGnCSnol4+RmTQKJMFqGMI9YxTa2lwADPxs8YhmTIHF7YMY9fKzGN7FgtAaDnYUDMVDOnZGEdlcMsqY2iYcWajVq27NirU8/BRo6cOHPhyo2WO4827f+yq3o0ChAoyC46NwXTCxFqmTDhIiwXKcoYK6wUrVmMsWKtMk6ceOMlSJRkpllqNODhExASEZOQMmCYqrBJJZ1MssklHy68adbbZFuEiJGweZvLCEch2GQomlwxRDpjXL6STeTFB1OV2SiZCsyQJU+GfH4Y5mV1FFNgpqfJJJvJmGYtk6yzxk67Y8AVIW2IaYItFAi5Wuyw1WjZ5pivUrlSSyxWoswCl/Xqd9cVXW657rZ7HnikzzMPdbvhmjueuu+x51544mU2xo4TN54DDjkYPwXnnXXOBTmOaXdEh6MuuuRf+7TZq9UeJ5123Amn7HdGJ5a1KaaUsv9awywYhoFJJBnAP9VnISDHRCQhS947phM1JdM971e83pu/TbtCplqi7bpoCitw0Cfc5T94GR4EU0AZVdTzjRHaHe04HKbZ8Tud1+PGX9113vUneKo39l14ve8V7pzoOSfmvDvn6Vz13PS5BXM752EUb17IvP75s+cvns/Pf2X+twVzEzdMaS3r2MSOVmO15rMlVm1/xOLP4S/VVBnKUonKpJZNbWrWAZ3RXfXLRyKwEQSRTyFWWtjFL8Ff4dhMZ1/251Rup79xvdDX/V+sFYe7Q711ttvsfs963ot22u0Vr+70/fwa7/YRX/uv1/hrQ0UTRNNFs0XpoizRu6/teq02SAoKDRoJE2AmPB5UGVQTfPBf0X/y/Ot7Kxt7rGPWOavB+tb6WaY4/u74pyPQ0dbR3tHVEUfmkfWOPY6TjkuO544u/ut8r/vIdy51vbt8tzf7Sb/hr30YUr6ZPit2oqcGJ0Fq2chJurnOAwYY9uWs+HtocGjP0OF3TL1j/h1Zd2wKPRBaEXot9GHop6G/mv1X2D/CQsO6hQ0Ki7kz6c4tYYfC3gv7yXxz6/2tr7Z+YdjtBn0yjF+q1/EVFvq6zBAdb7D7RoQ7FrDZ/8n0+U+6wTzclQ0znVbBpGMKqJ6W6RuoE0P9gaqVaQP9l+Poyztrv67RIjWRuSq2mVcNs/anYrqAgwGIxDzTt/eBQRZqNVh9GP3AwPESRiykEK14mvlw0JCduc/VY1NJJg2IkZn0FjfEq1QIrl/86bvs+P3OEXy60IJWa4mD1kMc9uDmv35FX2VSh/F0Cz4l7sn47XfyZLB9ORYx+LnpDAQT1ra2S9/IQ55TDwqAAZN4vNfPlPcGerVLhY7Ke3jhjozhAzFtIu7ul3D74AId43uwtdGWhO9I1MeJA4jo3/gxFzMRPxOs8pvlTpELwGC2VTUqQilOV3CsWbB8oguu7XxIEjZj77WMZVjQeVjkNVd21H0FtyASE5bYd+X3cyrWhmFqHmSJFdox0jVoPDPpH5mjjhMZTAo69vGDLmBy0Ipp0nviP1kwAiQ5LHLqcynUJfNJJZDMawj7Kpakrx9aOxZ8/EiWL5Cw1c6uts50kpwWS0iHkujo05ud3eTyN14Srs1nV62QjLSUx2PsLwYTt23tT7HOBQc9J+5D0DWAf7rsOH75pZ5z6Mkjq3KRFrs7rTWws85rBJmcQvFmqNsqkIGI5KNv4WLAXn9YJgjCFt08EWMu/aYlY7CZtDU9VKdc/MbiNqnBGo4NaorosKBeRqTobqfTrhTcG5/lLxHNBRmq2+0auQx7qesEaWyjaPlVUWZoBR3vpNwrnAq+gsfXXI2OUf6NxoVXofHLkhZvnYiskdGIHj6KpattdFpQo2EqZhRFZDUvEpacFQSwJ1/b30a8CM4VxNdXOSplbCwlt0IpnXThWZH5A9TdVzNmnBMa77lrjmjfw+0UDaa0YdfPceSlVAuhUN3dXtdGztyKAXERy0sHUE57hXymAoi1cdW6dz5f5qHSzw85WTNQGY+3+RvkPW4ASEWrbYEJwkKBey4fjhUcjhOxWKtRqZ1ODQJVbHg0EBJTRqzf1O3+qbRAtL8BEFjreuRgwfSEWghM206VNuQh8oasm8GUpzL5dPrHX74Ovm3QZJ12ghWRomzGurJyNTr2YrcgND6nU//jdzMoMcmvfCn8eN9D/S6MIPgWT1R5HvvK+Z7BEW+Wv6GjWaqArBSi02byD+4uXpuie04Lgyl4sfDTGVcc9C0+qDL41PPSL4MNEVIASpscbQpppq9JE2jXqKQgdtV3yXRe3HnmGYTFo18GW1x2HLpxrusKEpXqPJwXGlGk2inRN4tJ2m3XYBLTdwijKTQNgIKIcwO6l0eFO5DwKo118RiRf7kz/2+IWC2y+FRsH1CLCQuNWh4w1nkXShEFOyQtKP6onfwTNQ9oM+3VtpGVJAd/T9jVGG6RwbjEHhMI2BSZ7WdsRCmLpASOWk+e4LUqSRiCd3UuCNIrNWUT738FcR7g0FNcgp7hRnkFxULCBGJOCCyUI8vcbXK0jKWoEBKMdnpXOokyoSbvlbtKg+JVzP2RcUV3zqRIogYXTonMHcxySpSYSQGWlsBvqGDeuvr3b6Nv9nAOVI1lbbhChMto8DxmPSzYdpa2iy8ytlZFJY3jh0wqT8ygufwS+MIij4cmdeI7S3Z8qwv6x4zClduDx4WO1U83IHGr5wq9EStbW5+u2baWCvyk7Ea6Qa5gSsBqtGSxVPtkq3SAObmCOY1uv7UeQCXESlG5UHMTYQPfDVwNaU/h3PjLPblJZGoVi8GazZJYeXwyxmsS0msFAKR1Lmj0+mxN4QuUDeMC0t7LjFa2i7z4nqvNCNQaLNkVDG4FLt2GkRBvO8RZOZUo9GZkMREmXezNJTm9WpPHbfWGnR02Utq5qBLbXSE0CsD4Nh5v9eMyjuMy70jSDKWjOuAWrchu8nph/qaIRKNtK+1YJYHnsLhdggObXNmyJVJqtCcLI4S0IivkJp9bMiZrcwlkGmkerB/mdTgiFgKaQl4AKSkzi4JGbPXmVAXsWC1FeWTP5VZTSOhFZK5gSaOt3ulYJZn12jLGJqdWsKLs4yVD+h6niKv01g004rlsjldAEJO+c4W1MkSMW/F4i3gnYyOaO1vl8figaJXFYb96LG7jEbp0jJaqh602wqfhYZctAZDb099LBpaOBZWBUWI/DrEgnQMC/tJUf13BvtdwDxlm0so3N88Hjo/38r5ob9Wdt1WO0MrSifMiMn9K1xexI1oPa3DG5AUlHa0p1mU0lq8seefyCWpmbG1C8EhMi8mLJ45WrcTbhVkVZc01OmOwT4vz8obYlaoiaCwJbMdKcEaZjFDgAL+xGg/oqXbmwtSZwPdvKFMRfDW1XRHp81ZSmpK5ugJNM0aiZ8BlTUbs1f7JxnqrPl+xNnxOdvnF4fMcHTg8wMwZWJlbWuwoQuNAjh2vdQP2h3P72iD9jpJcLrVKtOC90/R6lGKpFhWTYfKyJ3Aiawd/VjYm+HWEWdrLxOVd4czAdkgAxDMN6X+UmtUiyE/x1jN4PzleJgGZB4XPfC1FTtxaha8C9dTPlEcuz9B3LqWfSI4zy7G3efYtFLWpc8poZZ9o664XrBumRa0I6EXF9FGn7cn7HxkWlxPXSDTShE8uHOEYUMfc6BoxNY/xnEZoMlgVAqGOBEAQHSU0aIwCEpK8n98EHBkkrjOP3n/agoI2cLOsk27+FGHRAqGFLmAPvmu/RTUChZYDXcZQuqwiga/9TXBYA3Sq4cgS8ZVUpSa8UnVGZvHYzX53OEyTb3+ujFCLk237qsM6uiE/d9QKjaGsyD8v4Ihwp0dIB8hYADHPV8fmD6+V240eDJTq4NWjM3+Xmb6qTuTyBAUCgsg22un0XlUZHK0pfXEuIflYznIm76tFOKcQRvSexNhEj1i5dnhp8N4IiY3wKjR4vuIXT7VeuFZ9bFaM7nLb2mwoTqcWJ43kLhhpdl8/7UIf6XjIUWWG1awthyOOzvjpZXz+hSXT8PNZn5u1Zzs8AD75llgR2EsXZ+JTJ9CJb1OoNxrTLuH7kXQQeXLtEoAYu4F3+F5csO1roj7w1Tir3DmSa5LPvY1yMuGjgK3TSDH+9RfjZGNLvuEUZZGJiehIL+VKYan5Ojy+ukFX0IqzCT8ARkIaVn0gMCsXY7s1rmHnXtNefNPdIyktg/vjgS+z0xhqDedrifW1LnFOTsptoCjwhHTCsojMC+a6d9tRlDz6XRaN/VqZwhC1t0VtgeqW9nqxuzIQ75qYAmjyp4rU7/3aFuNfiB4zde+Ac0PBiJ1xjvb9+TbCTMMYISOtt4Wygm2fAAQi/EOEEnk3S5B6YcmTTkjDCwx+h5bQP9rckLvHj7auVhlzGVDKbDxBcLJi4k/h9Yra8gFadWnuPff6qkr8qJMSpuM8gfmSJqfhVE29RUu2uMK1ZkgJ+ByImGb9NhAZm8GN5U6ixLjvtYH9rYWBLb0Ho8nziL7wCfHWgxsG8JqfsbGLyosfE0vzBPE8UHaKXhunv0K1YfmT9yj3Zs8nPz8CzNa0HzhOY+9WduMzH7gveq6EQIv9yvF0ZUSFhkqLE50IoGr+rPzg7287Ts+JU3KnNiVtYnZ1ARlYm4MWV/rn4CS7he4fYJU59s4Dzx9o8xfojdMnpi4jSOL+wSKBWd9fH5w9cVxNzaR8ebr+lWAzdkuHlpGY4miV1UK/qt+bskD3LazqNKKoEmli+7KB1e1h8bFopAaNpSzbbzgZiAotqicPHFOik/HnzCZ1zL9Bq9DMEXiJ8rM33mAJX26f0Xrreax659KRDW5W5fCSHXmrDxCiJZeX2HZowZnT9FqMUhn5V0crT05Kbk19kbhKyDZkUcqFb4xAPOO0WEvcby/Y3wje1Q5TYfA8Vj8bR2rVVaulESw9vlxpqrXpdtOEi6lBrVNnFBnk6hE66ThuyPgMfKBV49meLCHw+aPLvxd2/hhO7VoCGAxqL2182EawXivMX9/rQj3jta8spfmzGsRp0PYl614WbmkQXPzivXVyoHwgT+E+XzLhkQZVebbbpT1oldFeef+W5dgindErR5GJ629THBrfI3i8aSZQvxAWEQumy5gpnVQnDlUf2T/AqTYyctJJviwgQoXv6xbxPJMTUCDcacnG8JYotDxXsKjJ43bKmAMNtlqjkgUGsypdedizaaXDRBpp7hdTsGZcNFJUglslkEsPDv1evJ6uldHkdrkqmfmJq9TeSOtCaYrpKDmVwK3uJc1NtfVmUGVcBzeO463wxfS4SKzeSudpuMbIWzwZ/6ZTaUy97QnFvMA0xXuK95XDWCPmrJv3eIQVVyCw4m+/pClMti3h7S4ViiowOhYIbcAO4U0nQQ7/p6Ba6ANNHwXt5B8qFDgDbFmlUCaKBB7ZVsm2B90++M4Bf5VBeUywUzu40bbbo184slVHKFI33d3GFgywugnBr2dZsy+6BldupuQVUt+p/jPenuKMpIOivHbzPuIFM1eQHqiPHCp+LqwVYLI/ktJnHQmmATePsv3CgNXCJ2xpTN70kE6Y+/ykA4IrCwMoJuBSoX1VcVDzyfR+9qGRo/odbPreBHWO3mwCMKuBLuObm15w66JwqZo2qztYJc0PjeYa/6d/9GltrQafPoljs22uQ6/EiOmbuifiHR5JfzF0N0AxHRGsxTue4ewajpGLjTV1WjRFOblaUf2ySR7eM1bebBc+0iqWDsndnuaGDVI4kpfvoeIbyF3fbQ5n9Rc+XFakU3LVXO2eng4xkxfRCi3TbvVb0NSDN4Ol9cozVknh/H7b7JDB6S4ySOm480nAKfTTDqQFBievAo0tmjh4mmaPBMt1cPfY4WeqaNehKl+Hd6sNO+qmYIvajHoYbSiSVJFsszGoR6Zvv3N/9dHJT981H2+6fIrc1jYrmqzRvPr6WN5ir+QB2oMGsC3WQ7FFRr/nZtJ2BIUs4e8vW7R0fk8UZeGO/Txa560WoB/9yOmJDP2V6MjQRNJ/4o/ag3Ya6Xu2R63RxcRF2P60Hg/BZy4vY5E9GO+Ox5UiTxab4MUJIa8xnBd1XuDjjIhWHtk6ICoFBOKnRkX0UzEui8gCDLehoJ/lluJzIkRO0Y8zcV/90cXmWy5G6lc928nSQzFRxmmYM/7qcUUSQj495nbKy2GvpDeS5MSllvvKUa+o5SuV1DXjC4bgVdX1K4tk3+lAGkLbrMXtKxPPVkjvYb7aAPfSj02PkaJFpjY9ipboxSaaUx006uCYWEHcSLKHx+g6NFIiQA2i1ggLgtRKU+SbCZaPM5TtV0lzHDiB7PZsxaidC6cXzqfTM5G9NXaQCTl+tTRopcfJf60SIp/9+XjaiygZ7/3qGTKGpqUSUNNkRJUYa1aPxq8SrjO0tVk9XEITT43/kywRaBwiaS1NqubB1yy/EsbjIF/EixSpBhuUTYNs3zKZAVdxFMwnXI344SJ6rYUe2vQGRgge4Zl0Dl9/jyxRzhPNTflGTSQ3mH15tEHeHkhCBk6YmENscBh4A5I/hl/aevQLzEi2DiNRxuRA0vnVSrEKXfOUYkxAPJolEGiWhUikcGpWnWjWjEEVhMsEFe3kCRgLLJFYYCoJZYgCI7hbykCSIyI38IQ0l1XriSDBVL5cnSASFVDqanu1QSISZZ/YVbH6XSsyprldvWEnKkSp1CIsgV46JdJlbAmswWyF9GosTbdLffHqUvw9fgl65fXiHxfloM9i37pG6jTSK9+7hlrsZIwlHPoJMuU0CFWw4RbYTsZuL4RGui50Mur8JjzD0hy8QocxljK7w9EbBTceT3Ns2HzenwRtBo1m5EJduP0A6ZTLBWnLL3XjRfjr8bPfHzGs54xR79sqQlHssF3jfjH3nsji3w9+W161qPfeiEax4d0wkdJvqW9MbPUkzR4MFMrgi4ur/2wvi0fmCEG592tbU3ThakTkoNF3k+Dz/rAB+/Gp41FHr7LDNVWvdFuaTcgYA6Zh2IJcBsCkTbzQiqPhw4EYtdGnzLKLf1sgKmVKXgdS8H5MlCFEB5/vqTG5SUl2d40OzmuWN5STVZOaK/QwalZ1iJS4TfzR5asfL4Rfb5klN5/LdsqgYsmgmmT0j4VOHip2HNZjfNKSWI3l8NVliVeXYEPV0lukxGXix6m0b+pDFa2FdPOMkFwLjRQvIQcV6qYnCwNujDZfCy3XwaM5UxJg3verZM8nN2U3Kun6Vex6s0W4jthda4NzRsxT/TeSaq6Vm0Kq1lK6Ia/9+UQYkVSWRjL6xkJXSjsfTjQPYs/TVVVM0AIndhXKOso44BmeHKr2X4e8hni/kBPZ/Biki+RNKOSqrMh1tyD/EyV5MUj/YyJVariQ191ESScwWa7DPE5BD0gFdogjP7tE3D900GBMkHH9VXsR2Q4JBztkVFBRUFAWJUiO4EOaSmRkt2ibKytRjQmfKNQ1NJ4E3BulYqTKKMIy3pMomNqoGQkt4LiIk3FQREwDmJ5T/ca8QQ4yEoHQU0WbBpWv+7BST/S1Za+xU73HCKXoFYT3z1k6WgILrTEgQ2jyXYANWB9ATfGX/d/ddMzP63Bz/BYg+PZ8bEjaW3JGdCynNBtNxG+Dbyyj/Ys/5K/fmlJNsG2DlrZRZPF/+Lt/Pf/Zl3Hhwaq58gL66KFNsUjNjAoApbJzka5VjsilZzhZO5fjgmbG+m08Oqa+mxE2tVYLsVQ167/KLVRLXr8x8GGScNnMLBXA53emTp2iRji90x4AHJLih5TCp7DRDWiB9sHqi8oi6AKOHA7L7LC32PeKbIG2fhOfkiHVFchAmFmdrCtzFjcLKcPFpWuRhaNn1OdaZk74u8MWfIOunl8gx/e1pG4aR6lGEtuPt778xsduIihtcGN+0u1BxjKG2JxFg/vXUBt7UFWwmVObPmz2r+LtNBBrH5W+QfQdJmYZr8Y13R3mFt1eETVpdxaKaDja9BvJRKsdrTsUtbr+hpNoQ+T1j5SgJHcy2GUJdGjDJgVAKjSr780cOz5JjhTVxWYa/5kgLi3iAh/3R/Z5MNRrQ5okO9KhWQYllXHap32z8cjmu1CQxOkwbnm5qOKPiMInqkg0y5/I5phyuZx5rERRxRagkhTzuumkoWWtEOkKiWq+uxSNFMSI4QopHbR++g80JY3tQx4UQ5wMuCjUuPecSmHJzaSt7q5xmEnBuQWeNVXeJlO0mgdfQdrcMipxnxsU9xksAXQxqIDLQmkm2Qyxkz8YMS6TO1FcKFW77FGpwZ1oKbQu1AS5m6WQvMVSkwknDLx13UVW7J0pn3OSpJG0ldHNtU8Z9G6EkvQuc7a5QCbdKT4Ib1VyQnFC+nkwLmcXCYfhJqt7164zusZzgiF9deecB6NkqNgvBWXqI9B7l48OmDJo7ApqNYLkCgpdoUwdSnTm9t8gVhN4FsNSbYBcoQLV8I7nFEz5VKCg/Gplv2pT1ecXaKlfHQUa6UeRBbN4hO6xIjob2fVIOsHEQuntQ72iGJfFlB4UU4bQsVPGEYNQiimWj4UihrEuZAw7x3MZB2SEuVWswoD66DiouNQBFIA5XeIcB5eoz6bokmIU6X+iriZUu12FWl3WqhXbH/i4BmNwGakhFzpIpesI/4sUl1bWQ4uXxVde9/CYyr65K3R2ZZldighlh8z11to+abHXej7rFH7XVk8esq6v9huvD5Mdx7lCFS5wx3BI2G3Hscm5B9IQCQkdzuAYmlbgzk6HJHpAKKBokna01n0p+OXj/qX36PYsXtKrSbaHg8mc2HVAx9DU41ln6yCM3vfDtyNa5zh1/VzkCoIJGMMZdNd5fGJPdhokizEvvO4gKdj8d4LIbFllOpwRrYpP1WWvglbvYKwCMLBqSxiL4S/7t+Ecp2i1E6mqh8wWj5rnAsR6D7Y+173HjoaGZMOSSy2j8/K1rwQPzpo+rqPvjAXqbdB48yqHX3Ws24jNjbsXV8D1o5uTIvIeKHIV+PJO0ZvZFVKGpFJ4UmkjpEril2hU7SlYy6epdRJ5t/nQq3RbLu/9kqnBS7Am9WAemfmfn/z++d6gTVIsdip949WSN2CXByN+cRgJcowztb9/X+TwR6dPHJ8gRSV1oQkx3pX23y8u/5eY82TRlMYfmTvpNWjwDKTs4Ghh/Tv0AHzcDyLv3zruIYH3GJ/6cP/jbx7RJDw6vtWEVcfUaofcugJLlO4056Oh2XNneNLYE4F2AJ5XXDw5S/YeLW/uBz67ZZBavU4T9air16TTDJn3pbIlyxG2IkfyCJGEiF0cEvBgHDdhcAOx5iXb7uUvKXzU58ruvED4AlpOlJoR8hk02rJGSRJnpqzTTu1MIScGALu0knXSRgtZWRjJrO0V7oSd9rJalV2qV2dZKFik9mX0egaaiBXa+mzf7jicrh07UUpNe5iB5MfVulPjr51WTotpIt8QDRu4WfIkcE1CKX2EATmzmjhchLK1ucvFHnopn0YJkrhsuIqxXMcsYcObma5tZgp4LSiYn3KitlrXr7Al3UPhK1iyBCuCSgFkd12xKc1I2JqKYxKcFVTG/zGWsUovnYSNBFaOZdLPg8dl3Nt5860RjViRNTE6whVHbzW9y+t6H8uYb5lSPkwKq1h9OPet1zMso43wIYNWz4BLhzpz4Hwf64Q9M1pOs3q+HK1108ddWr5Z3QMsFL6NEvLq5K/74HlxS5ie81cqBRKkNB8eiCOhafjRDVnPrrpZPQDgC1mN0s/X5bf7WB/bTRNk0zVL08HyWKGjeULI+xrCJgaY2CU6UXZ/acCcNBJbe42fBtdjJXh27VDpFRUixTYcik2jBLtGSuZP8wkU056hxMiZ/sqZAsfPAA5H2LtwlEiCJmMhljHOXvNhc+USBeVmp3KVokQWaTHctveF6V/UUlEto1OHOae5MXi0xzVmSUyzJrW0zevWK0GPi8RM6PHreOHFLfJYCIjQhzQvCtPb9JHfttAMrW2ODIgtoFj40nOSWWPsInTz5Vf2/CiFU7nfbgZzj8vT4to9N+UOxsNTWaWO093JLJT6Cl/5SoR+prlwtimMIRHZ6w6J0H+gntfxcprDBrygW5eBcGomeH//+ADxWMInA3g002E6ZmJW03R1PfU7REIM++zmzlJcof02gAuqG/vgXB8rOa6YYVeXo4DzfeWlk4iNjwZiwoS2Sir8gkLBt+KZCazUBdWk4RV96AIJ5/8VY0Rc8rJg3EJcxDjbv3y97h/IvuOiLDehGyV6GbeVTxoZI+Fnv+0IsvX/BLD74NrgyHsVv17PMX4fHYvtB90wq30NFEZYSGleZ62y9k4SGOE5i9XEnmxBskXHgzoZsX10umAXtf4q7GlauUIXQ9k6zbSrR6pffe4EHI+w6Fmzl6rI70n6qeao1hZ9wlZQ0gFQco4cN+JEqRsU23axX/17EHE/iymh6w1Rk19dJu0VwbKwiNGXNK7dp09Bk5cULnLkjyOwKxIj5B6ADl/SR99GQe0MlEUeQicTPl3Hj//Advqtgl+txFJiiEMxOmKXdLZuLeEQA/Z99G52Vmfrl3elGWQVeP4dov/y35+frsihqImMsn58owe/rydqs0AexdFlUq5fKVeAN9/T8TVyFdI9qTzCmh12K6IFPuxlZ8fb9c36UwmPQEM8c2nz4lBrs/59DmInqNjS5m+vytGu3TEC0bz8Jgj0+MAccCrCissClcqStvg95ZrpEvCf8aHWUypvUkhcGvLEJ1eGhG9f/sQrA+LvX/3ae9MaMRLhSdCW12un/MUg45D3xL0CkAyMZZYR6ViUMY5NArTqT8a/rfIkMiTa2jG1k8AWyhqLYRblGMGMMY2gUZyK2PBJbhEGbkg9aQjNePgVcyEZJEGx/+iBCijLG8ZmPMBAQDVYlzCliFtovsRovwFfyI+rri1203zV++V7DTyI1Webux9V8viXck2DYrSQbVHT2/wjrCBYyTlbyPN1gFTs47dVyCjhByQojbn8Oc2NsVOQSrS0cLCrDwuqmqz/36meLsxvXdUaYZRPNPpt89PiuryzyoteEqTK6jN1xGoGKQrEFOkEXssCB2MUzsXo5dSmSL682OhQ/py5+98zVXrEd8iYoTL4nGd9i2jYSBvzqZ02DM0d1M57eYrh8PX9a84p+DtD/T9FO99jFgS5HF6mkIG43aqpilWotbba7aKA3o/LzUiijn8KszLN9PJjfmX7DMM50ziDCHfFW7pdu2uP74AwVCgTpcmoBZ3RBV3Rew1hLExqpR3s4zTrHfEJ3/VX7C8O44axi0+CsiOqOBNJSy7nZl7nF4ERJCHAACfc8ScbBU4CLKWBdWxmJ20c4xTn6OEOj+jjPUMMlMFhCGpQZe3qVO8GN7uSlldTc2311N+lvWluA0emvefo4/sWHAoQjFvxMKuNNRwz3lN/8agydZ7uS+1QyJLByYNMhvo2v/vL9IYJy9S3wNipRyNLSh/tUBl58y26LBqjqqGzYd9sWz29yzbUIWfzKvJoy8zmOh1iiWHbcB3ZsdJKFFk8l9V7l9rrrL31y4WpTztppsa4PV1ra3XQuWROZbxHclg3y6xvZxn99YFjZs6raeak/+oQvCy9fnqO7DvaFLtwLmCGhKZFWqynNVBnnCww8M6iOw/nE8nVGvLVxKdTMHCSuOElsD+lEDug1fw3alUml9CT62pyoDnmvglHMU2R/DY+MmDUjIAwOG8WVNPhuligzcMgQ3xukH5PSZHvNItR37gjryjqtRFjMsySr2cNyDtEXmTlCuY1O+usMH/zapeVQEMbYIhcpfiUVPHAgXxtd7g1nCtIDbg9OnFC6XRxbx4i3qCudN5y2xV+G0XnbB5ePhFsrIeex3l5kS69sqCL6x6vSE4JGQMsNpSLUdpOfsUGQ6y3rbCYTvtP6lKqVu936BlmatjdS5u+bXGNsackq5cHwx12DNSjHasMxmNx1gR3tNgFzzU3OoiSgIdivOnDCc/93YZNnVJSd8zfCsAH587fiJKxMc3h0/CXx3UcBqxhxN0xGnGGkXyyYC395aCBKVnJOpKlqQyUMta/clvSFh9f2XjvmmTthf5xpW8mHZJ+5KRnLb67e+zGjfSj4eFjCp/pe3fiT05jGKZ279KxDV5O5/GjOzlnBNg5POWgbwP6udNx7MpLB84h8H4Pa3PTeXRKd14WJG40g9rHkDRJvjsDkSDk3q8xzvTDnhN3oC+QGLdafzuepG8e8ZwMBvHDnZ+P0ZJL2nMnIRjj/mp903Ekvqg7kiUy2kU/MJFmFHuKciHzF/KPEpiCSoas8oRv4JAypkDJR+d5jI6oPRJawvNb8S8naFGV8MwrcGhxbuWTwX1GzF9S0cwpfzACLyuuXkl7/FOBOIZwe0EEzSZ50p2DhMakyss8EtR60L0vXfTWfl7Evgv73g3eKLp4pzEZd7epjfnx47PxzxYpBPmjL7ebCKm2KdSqDTo568LpScWvIvRoUSmqNmP1gehwo9/QIdqYXbuvCjEtudWadBx3GWhkmdKUMDyjKLELS1BStM+u8DybFJAvRFm5p8YY8EnZ+DS4OFDcTzuXK5MHTKtroHjJlI0Gwkbr8IMCI1XMslcoGO5q2U2aEQTF+79+uEIOXXxGfR4xbtZT7CGW8Ft/czzffddKvgr+tfseB37df6fTWLGxWEUnRKYWLxR8jmWn1KUsTzlT+uLoafSyXvlPjVgpJNNe3UlJ7AF3AC0hRss8Vp0BHfyEVrd/6dWFlBmOT4/zrp60y0Nwce5sQYai9HUyrZvXePvcV4c2LlSOEu+yVks1jFWVZclJ70kKs12/WyFCeTzfCOo3MzlFQdwahU8WKrFRgNE0PU8oTBu8Xx11Ea/HiReXQ2jqTsGFQl9VevjmfdlKF7DQjTopbNYY6+IcUBllnwVUHwcYfTK3mtwF0BnhayA9V6VwlSLAQROaavnVaNZFq+POKEzs4hOS2A7k3n7EY/1HzFzILcYkjsnx8r1rF4L4xOnyKGDDB/I8G3DmcJiyPbO2pRoZyRgaBuubde9vLPE0KO4Vvmw+igJPa66u2Anf2ecMO0hh5r76NCOcbNWFtEIWBPr6H+9h690XXjhwFs+GJu2WNGsC/Fot9ycQPTaVB37gWDhNY+a1mJgED5GVGj12cTLTklscY/XIu8plKuwuwDpxAOAv9PfLe7UOOhPuMxaVolsKhHFM53hYBfqGEg4EnRMUFveG1QqLiuWBbQqbqDWVy/uta076JIP3PG1CUZDWsBT7EZ/IF1JcCAK0pUJDOd0cMC3Jrm4XIoKRjyzi4MRtJVyUYk1cUksFNonIWQrb5+5k3j+rOTZzWSNwJ4QMmvZCCnVX+kp3QDK+FfrZRLJgLb5+NPjj68OnLlCrXJeZtgTHcUvoBPE4tgTwHdDrYzldvJNHa3YPVpRQ51YoCzp9qNYXJTapoCJyYkeRu5czZ4DujnvUyU6Wi33IgkfmTZ/jLiYTgWRVvkCMebR0BZDdu7T4b/NvLw2CLV8KmG+uab8avV3lNpgoy1cpS+xbfGLF4MWIKH/rWosj9A+cWHR/7RXof/ht8C1MI4BQhIMFCFjq3IKYNYZbE5oZFBM0bCUEQs045zP/qCjM6GpPXNWYR0cik5ibgFmG26puCKQz0Vv9am6saF5CCgZRLMPIDZLcK05mFfiKC3tuTcIGYkSK2QlcN2WffWjIX6X70/dr5JAFZYuWceBjhzMSp+Aq9MmsO4pHnZNXoZJ/oLAypAa8fFBb09AilaIr5bCF2MGkjwVDRmkNZwiWHv9iV94x1kJUuv5TqRqN0ifol4UzS8Wcv0aAb/CVEfMKg7GErDr5E5bMcsUM4545VWLpWwUSQ6C/HB6expOQDSAAsNiLBG/dHh4LqEvH584ChlAAgJGR1Emvh0Dgi6dz2Eqd7GIAwEB6g0/DcOLXYhjDFjql7/ZdhxbcQ/viU556KEC8m3EX0QbAd0zFwVy3158He66zN/ZkSsAnTzUufQiHnZVrCXOYSU1DZu6yvfi5QMQPea5yTDsKIyufEWeWuh0PJo3JIR8Zs9CyOmUWTV9mRITyoLnk5rFjNSRXQYZMiKYB5tAxUaKY6CSqWBeWwUYSvwBWCyF3EYOuh3XBkzjZ5IqetAhoM6SzUlDkB7urmpag0VyyJKu5PSR9mCv1YAyfQaYK6iHboilbZY3fcHZTKgcm+DjNR9hMk1E/tIFC6jYMaCsGSs5XyJHbVFPL97uz5JYuA562bodMoGb12jkZ2/fnPyepHPrdHk3IWfO2lbvOThinoSU/8FBPvtrs17bbY5wyu8cXZcfa85Xju8ycHPlNcXiaULQhmiGSqqpElT1wWMx7Dj4S0s8zixUU5qmTh7GcEMIOwtPgRUChrgwUh55EBwot7V9JMup/7GkMOlzoPqhx7CCN1yk1MG3d2mXOuzfbkZTdt/vD3UD7/uyvCY4/FMDv9IUgCAAcqSPkzM/0IsAELRzHxz/hRR9CYcBIm/TZseRccLgls1f1A9V7j1wbO7tjp6IAwOGgK8sMjHQuikcAW8HHGK9rjEVGidLrCZGXvjDwHV5HBcZhQQMAa3ZwDjvO4lKRTcsHyffuAv4CCAXRE69/+1pDx5xk7Iyz5C7oZOayHioQicz1hD8qxzx5ChQqUqLUIostUaZchaUqValWo48bt9k2EGLF4sNTpUmX4ScIsw5yh99foQYEMglM1DRDYh4U33GMADgDDPbgBEPOYsRhxmCowTCZQkU2OQWSGecw5xQlaMYYO/UVygdfwLwxGp4SGhJhOITDIVwjJT4AmgVQfYIJGRklzEhYGC6khnAFqKJtbI3HBjnNlnPZK/qXBxdyBv+XEtrYC80budBol+bLj3BVqBJaD8byUAIb67GEOAh/bUlIlYGQCcA5ViKrck4q14AhnWLauIBYISrRL1OOMqaCCDwU08Y1RI44l+uEk7h6YFwPznWJc3Vy2hVwV6yCzadB9CEoVu+Oee090gdfQdwaiZ+YJMCknBjIKOAwDRBmGBrbgtgBML2CWBVrYF7oQrz5gLXLGB4cF7A7k43ObEGcYIIIJpggQgi+GwnmSsUSTge4WMQjPvHAIgVcsqI8DhzhRUku3OCGx8cBB80jKKgRTJgLCxUGF4s4xCHIMM12YEtGTKKIJq5hKgbOMB8M+QglJtFg9p8htCNwNlyWDsfhnLgsp5yGM+OynHMezo9hueiAs0Qsl6fLZThXxHIR11yHC21QPwwYsnbjAIc+YOKAKRNKmIEVOQ4p4ZBSQEgIwYQCrpxEwCz7kbjEIhZBxBob1shs8AQlkigiwZESpIhgyAdSOJCSEU60FIuYYLIJDo/gMAgOd+CwRhyQfBFHE92R0RfEJRbxGHMlADC4NUFGBMD4JAgQh4C4AsTS9RAYkVS5Dgjj+4Yzd2coDWg+oQQTQiihDDW4ZHcgMInbQwBgCXTv0q2rMu4AgO21OAZW5G0gCAyBiY0c6IxCLM5PRW+jBMVz0c84d8W6x+bERf1acnEo+m/33vQBFXNqATIRjIyNjIyMjgx3BiA+/dvLaTjy4F9Je2RrbUNIZmUlAJA8r+cmdU749DKQahKQejAWOaeWMk0oO8Z0jxgaOuXVIiCZ9FwEPsH4SARPg0wef4D4YoFM/PbkMNwNBXMU9tmWhIVC1SsOG8IgUaIbFc8bwiCR4icWZeGtmEd0znhTWIQdNYWisrDPRgqGGmEYVV1PASDMbwkd4egPAO4T48SI9xu3Jz4S+ALDhciHVld7q2sD4ynQhxIBIM8OD03QJjFg3LwC4VUA1EHl7Orhe/+nq7fDrQ73li55/5FRbPCZ7VnZObl5+QWFRWK9ratDOj/yB1Vrqf/9f4z//cf/BfyTB74W/C/L4QwJDWvdJlvrmXAs3tOxU3jnrt269+jVu0+/f0cMGDT4tTfefCspOSXVOeRq8zqD13+/fn36off4xsX2RFX8jl+yPfXpOnruzNkLR86fO9/dMflPPQAzPvrv3vVzen4D9qAt71c3gvFfFr4PqLfcTmsBWGbx41m1795+lHo9H0srq6pXbO15NbWurDw0rLWvpnHTwP3399j9f56/+PQZfPn9+IlT2wuAA5/2AbAXWn8AkMgXxhAAHHaChBsjRYYsuUo126nVXoeMQA7xz9hMSUFKq7N66/EGIWnyFKnSYMSUqYLZVfHx8iK/uLwGPlVROfevkRHq3k3Onk6EaKmLuLXn2mKH3cDbtA/xS0wmD5lfl+phUQFJsjD6IZOzpGb8BAAYuXRa1j0uGxtGfoOGg6qZfou/PwHovw4AfvzOfmN/ej95+n16+2n6U0Vf86chfS8C0Pu9fxHXOXaD5uDVL7nltQEfAPDNbwB6lXSyQBZLPjxw7sjGRugJfDdAzDbPHA022iFPqR8ybDbTIjkKNunQ0dtzyOHuWfKtsdIqubZ/BoKw0tzNgBFjJmRMv79gtpnI/Utkmq9FoYMsrLbZMMR6G70slI9at1XI1xZpVmy5WtnqNdpmv13CLbbWP7YsxH+9f+3UZ59UEZaYbpoUc73z3oC3XnsD8xXbXffd80K/Z55jeuqLTz776IP1JJ545LFeL4en+zvmuIsstVNR6/xm/JmX2DrtlC5HWbvsrDMuuOKIFTydd063Dlf56CHgRsrLN9d8d30jDveAQxZacHFxtwp7tJqhyerlk/xM/TCw+N2VtjLa63+AtLcAAPe3TrDy9/5/4v9FndoQABAKKgQByL+hBdCriQ5TQ41kjP2H/Pb6XQD4DcAv4W0evLT4lcWs9nhx6BzC3Javp6lH1EUGhh5pybf8CoeezCauUM+x6halgdp9o+QoUExFXswBlpWefvwORBUAyEMAfoRRyeHGetIcZ3XoXjtjNmDlXP7dhDTFpU4HSyjghpdHjIuPQj2QQgE/x8n8ix98VzEOu/FJS9qLAdTdmmW/IgFVmA00qSTNQqY1wX+eDV4JCbMDgA8D0Bfs7BjD2U9SuvjreeNlPGWWM6sVdIWBMWUKrxcmqBypK1ZYZQgtGthUdGx5Bn3FcYIZzing+9jQ/uLZOg5bvuOcPJ6pRLULCh1h4zfD/JALyhlWRre3Jr4OcS4ps9ipaOAGRVXpEO23di5hoE4MfezotiBGHMo1iCuhd00LANM4mEq+iSCsE0ESwJ/JpBAS+nItyQ/2ZlwckeqX32FWbSRisxbT4HdbW+Y2U+bNnBbbAuo7GxSYkh+isoUV8B8mamUt4Vksa+sciVjdCLmFlC498jzHx2E92Y7x2ARaaRwp0ET9yEDOwhKOL6Gf1/ojHYj2/DRa46F+Ai2Iw/0WjoHsh+SH6J3mU6iJ7RMfwxjadJ6JC3Wx7JGgf4xsbEH2Don6FzBTFbxlfH+VPZWFIHrUcoCsb+5uRNZsaLKKfDL7UvJhYAzwHwBIq5d5NczvC8ALUflqEUZL8WsBAABNj8B4sVL4sE4aBDQpmMOX/zoCRqkagXC1xqLkF1ECRmAKfKzEY4kNOMObVoc5e8ynEoulva42Ut3mGdVIOPy9tR5Cy5e6lo0963l496+lTAw0KF6NW1rPx0auEVanoTj7Wn+7oABFzD2UZO3EztA/SvdncF14cW1VkDHsbQQ7lLLP8H9BtyaChRlsefi5sSdH3CZczK0ZrCHpUmGABqYLVcYesjbfMYudCqi2H4o3GyIxAgAAAA==") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0a;
+  --white: #fafafa;
+  --grey-light: #f2f0eb;
+  --grey-mid: #d8d4cc;
+  --grey-dark: #7a7570;
+  --accent: #c8b89a;
+  --accent-dark: #8a7560;
+  --red: #c23b2a;
+  --font-ifm: 'IFMParis', 'Times New Roman', serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+.ifm { font-family: var(--font-ifm); }
+
+h1, h2, h3 {
+  font-family: var(--font-ifm);
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--grey-light); }
+::-webkit-scrollbar-thumb { background: var(--grey-mid); }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(250,250,250,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s;
+}
+
+.nav-logo {
+  font-family: var(--font-ifm);
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  cursor: pointer;
+}
+.nav-logo span:first-child { font-size: 26px; }
+.nav-logo span:last-child { font-size: 9px; letter-spacing: 0.35em; color: var(--grey-dark); margin-top: 3px; }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--grey-dark); }
+
+.nav-cta {
+  background: var(--black) !important;
+  color: var(--white) !important;
+  padding: 10px 22px !important;
+  letter-spacing: 0.15em !important;
+}
+.nav-cta:hover { background: var(--grey-dark) !important; color: var(--white) !important; }
+
+/* ── PAGES ── */
+.page { display: none; min-height: 100vh; padding-top: 82px; }
+.page.active { display: block; }
+
+/* ── HERO ── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 82px);
+}
+
+.hero-left {
+  background: var(--grey-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px 64px 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left::before {
+  content: 'FAB';
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  font-family: var(--font-ifm);
+  font-size: 280px;
+  color: rgba(0,0,0,0.04);
+  line-height: 1;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-tag {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: clamp(52px, 5.5vw, 84px);
+  line-height: 0.95;
+  margin-bottom: 32px;
+  letter-spacing: -0.03em;
+}
+
+.hero-desc {
+  font-size: 14px;
+  color: var(--grey-dark);
+  max-width: 360px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--grey-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+.btn-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--black);
+}
+.btn-accent:hover { background: var(--accent-dark); color: var(--white); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--grey-dark);
+  border: 1px solid var(--grey-mid);
+  font-size: 10px;
+}
+.btn-ghost:hover { border-color: var(--black); color: var(--black); }
+
+.hero-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.hero-img-top {
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img-bottom {
+  background: var(--grey-mid);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.machine-visual {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ifm);
+}
+
+.machine-visual-dark {
+  font-size: 100px;
+  color: rgba(255,255,255,0.08);
+  letter-spacing: -0.05em;
+}
+
+.machine-visual-light {
+  font-size: 80px;
+  color: rgba(0,0,0,0.08);
+  letter-spacing: -0.05em;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px 20px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.hero-badge-dark {
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
+  color: var(--black);
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  border-top: 1px solid var(--grey-mid);
+  border-bottom: 1px solid var(--grey-mid);
+  display: flex;
+  align-items: stretch;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 28px 48px;
+  border-right: 1px solid var(--grey-mid);
+}
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: var(--font-ifm);
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-top: 6px;
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 96px 48px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  border-bottom: 1px solid var(--grey-mid);
+  padding-bottom: 24px;
+}
+
+.section-number {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--grey-dark);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(36px, 4vw, 60px);
+  letter-spacing: -0.03em;
+}
+
+/* ── MACHINES GRID ── */
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--grey-mid);
+}
+
+.machine-card {
+  border-right: 1px solid var(--grey-mid);
+  border-bottom: 1px solid var(--grey-mid);
+  padding: 40px 36px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.machine-card:nth-child(3n) { border-right: none; }
+.machine-card:nth-last-child(-n+3) { border-bottom: none; }
+
+.machine-card:hover { background: var(--grey-light); }
+
+.machine-card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.machine-card-name {
+  font-family: var(--font-ifm);
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.machine-card-desc {
+  font-size: 12px;
+  color: var(--grey-dark);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.machine-card-spec {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.machine-card-cta {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.machine-card:hover .machine-card-cta { color: var(--black); }
+.machine-card-cta::after { content: '→'; transition: transform 0.2s; }
+.machine-card:hover .machine-card-cta::after { transform: translateX(4px); }
+
+/* ── ROOMS ── */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--grey-mid);
+}
+
+.room-card {
+  padding: 56px 48px;
+  border-right: 1px solid var(--grey-mid);
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.room-card:last-child { border-right: none; }
+.room-card:hover { background: var(--grey-light); }
+
+.room-visual {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--grey-mid);
+  margin-bottom: 32px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-visual-label {
+  font-family: var(--font-ifm);
+  font-size: 64px;
+  color: rgba(0,0,0,0.06);
+  letter-spacing: -0.05em;
+}
+
+.room-number {
+  font-family: var(--font-ifm);
+  font-size: 80px;
+  color: var(--grey-mid);
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  line-height: 1;
+  z-index: 0;
+  transition: color 0.2s;
+}
+.room-card:hover .room-number { color: var(--grey-dark); }
+
+.room-content { position: relative; z-index: 1; }
+
+.room-name {
+  font-family: var(--font-ifm);
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.room-type {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 20px;
+}
+
+.room-desc {
+  font-size: 13px;
+  color: var(--grey-dark);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 340px;
+}
+
+.room-equipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tag {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--grey-mid);
+  color: var(--grey-dark);
+}
+
+/* ── HOW IT WORKS ── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--grey-mid);
+}
+
+.step {
+  padding: 48px 36px;
+  border-right: 1px solid var(--grey-mid);
+}
+.step:last-child { border-right: none; }
+
+.step-num {
+  font-family: var(--font-ifm);
+  font-size: 52px;
+  color: var(--grey-mid);
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: -0.04em;
+}
+
+.step-title {
+  font-family: var(--font-ifm);
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.step-desc {
+  font-size: 12px;
+  color: var(--grey-dark);
+  line-height: 1.7;
+}
+
+/* ── BOOKING MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.7);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--white);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  padding: 40px 48px 32px;
+  border-bottom: 1px solid var(--grey-mid);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-family: var(--font-ifm);
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.modal-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-top: 6px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--grey-dark);
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.modal-close:hover { color: var(--black); }
+
+.modal-body { padding: 40px 48px; }
+
+/* ── BOOKING STEPS ── */
+.booking-steps {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.bs {
+  flex: 1;
+  height: 3px;
+  background: var(--grey-mid);
+  transition: background 0.3s;
+}
+.bs.done { background: var(--black); }
+.bs.active { background: var(--accent); }
+
+.step-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 24px;
+}
+
+/* ── CALENDAR ── */
+.calendar-wrap {
+  margin-bottom: 32px;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.calendar-month {
+  font-family: var(--font-ifm);
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.cal-btn {
+  background: none;
+  border: 1px solid var(--grey-mid);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.cal-btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-day-header {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  padding: 8px 0;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.cal-day:hover:not(.empty):not(.past):not(.blocked) {
+  border-color: var(--black);
+}
+
+.cal-day.today { font-weight: bold; }
+.cal-day.today::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  background: var(--black);
+  border-radius: 50%;
+}
+
+.cal-day.selected {
+  background: var(--black);
+  color: var(--white);
+}
+
+.cal-day.past { color: var(--grey-mid); cursor: default; }
+.cal-day.blocked { color: var(--grey-mid); cursor: default; text-decoration: line-through; }
+.cal-day.empty { cursor: default; }
+
+/* ── TIME SLOTS ── */
+.slots-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.slot {
+  padding: 12px 8px;
+  border: 1px solid var(--grey-mid);
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.slot:hover:not(.booked):not(.blocked) {
+  border-color: var(--black);
+}
+
+.slot.selected {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.slot.booked {
+  background: var(--grey-light);
+  color: var(--grey-mid);
+  cursor: default;
+  text-decoration: line-through;
+}
+
+.slot.blocked {
+  background: var(--grey-light);
+  color: var(--grey-mid);
+  cursor: not-allowed;
+}
+
+/* ── FORM ── */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--grey-mid);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-input:focus { border-color: var(--black); }
+
+/* ── PAYMENT ── */
+.payment-summary {
+  background: var(--grey-light);
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  border: 1px solid var(--grey-mid);
+}
+
+.payment-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--grey-mid);
+}
+.payment-line:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-family: var(--font-ifm);
+  font-size: 18px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pay-method {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid var(--grey-mid);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pay-method:hover, .pay-method.selected {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--white);
+}
+
+.stripe-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--grey-dark);
+  letter-spacing: 0.1em;
+  margin-top: 16px;
+}
+
+.stripe-icon { font-size: 14px; }
+
+/* ── CONFIRMATION ── */
+.confirmation-wrap {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.qr-code-wrap {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 32px;
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-code-wrap canvas { display: block; }
+
+.confirm-title {
+  font-family: var(--font-ifm);
+  font-size: 28px;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.confirm-desc {
+  font-size: 13px;
+  color: var(--grey-dark);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirm-details {
+  background: var(--grey-light);
+  border: 1px solid var(--grey-mid);
+  padding: 24px 32px;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.confirm-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--grey-mid);
+}
+.confirm-detail-item:last-child { border-bottom: none; }
+.confirm-detail-label { color: var(--grey-dark); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
+.confirm-detail-value { font-family: var(--font-ifm); font-size: 16px; }
+
+/* ── MODAL FOOTER ── */
+.modal-footer {
+  padding: 24px 48px 40px;
+  border-top: 1px solid var(--grey-mid);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* ── ADMIN ── */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 82px);
+}
+
+.admin-sidebar {
+  background: var(--black);
+  padding: 40px 0;
+  position: sticky;
+  top: 82px;
+  height: calc(100vh - 82px);
+  overflow-y: auto;
+}
+
+.admin-sidebar-title {
+  font-family: var(--font-ifm);
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  padding: 0 28px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 20px;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 28px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+}
+.admin-nav-item:hover { color: var(--white); background: rgba(255,255,255,0.04); }
+.admin-nav-item.active { color: var(--white); border-left-color: var(--accent); background: rgba(255,255,255,0.06); }
+
+.admin-content {
+  padding: 48px 56px;
+  background: var(--grey-light);
+  min-height: calc(100vh - 82px);
+}
+
+.admin-section { display: none; }
+.admin-section.active { display: block; }
+
+.admin-page-title {
+  font-family: var(--font-ifm);
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.admin-page-sub {
+  font-size: 12px;
+  color: var(--grey-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.admin-card {
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  margin-bottom: 20px;
+}
+
+.admin-card-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--grey-mid);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-card-title {
+  font-family: var(--font-ifm);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.admin-card-body { padding: 28px; }
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.reservations-table th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  padding: 0 16px 16px;
+  border-bottom: 1px solid var(--grey-mid);
+  font-weight: normal;
+}
+
+.reservations-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--grey-light);
+  vertical-align: middle;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+
+.status-confirmed { background: #e8f5e9; color: #2e7d32; }
+.status-pending { background: #fff8e1; color: #e65100; }
+.status-cancelled { background: #fce4ec; color: #c62828; }
+
+.admin-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.admin-cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 1px solid var(--grey-mid);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+  background: var(--white);
+}
+
+.admin-cal-day:hover { border-color: var(--black); }
+.admin-cal-day.has-bookings { background: var(--grey-light); }
+.admin-cal-day.blocked-day { background: var(--grey-mid); color: var(--grey-dark); }
+.admin-cal-day .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent-dark); margin-top: 3px; }
+
+.admin-form-group {
+  margin-bottom: 20px;
+}
+
+.admin-form-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 8px;
+}
+
+.admin-form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--grey-mid);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.2s;
+}
+.admin-form-input:focus { border-color: var(--black); }
+
+.admin-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.admin-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* ── CONTACT ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 60vh;
+  border: 1px solid var(--grey-mid);
+}
+
+.contact-info {
+  padding: 64px 56px;
+  border-right: 1px solid var(--grey-mid);
+}
+
+.contact-form-wrap { padding: 64px 56px; }
+
+.contact-title {
+  font-family: var(--font-ifm);
+  font-size: 48px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 48px;
+}
+
+.contact-item {
+  margin-bottom: 36px;
+}
+
+.contact-label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 8px;
+}
+
+.contact-value {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact-value a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--grey-mid);
+  transition: border-color 0.2s;
+}
+.contact-value a:hover { border-color: var(--black); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 64px 48px 40px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo-col {}
+
+.footer-logo {
+  font-family: var(--font-ifm);
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-logo-sub {
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.footer-social a:hover {
+  border-color: var(--white);
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+.footer-col-title {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.1em;
+}
+
+.footer-tagline {
+  font-family: var(--font-ifm);
+  font-size: 13px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.15em;
+}
+
+/* ── NOTIFICATION TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 500;
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 24px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  max-width: 320px;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  nav { padding: 18px 28px; }
+  .section { padding: 64px 28px; }
+  .machines-grid { grid-template-columns: repeat(2, 1fr); }
+  .machines-grid .machine-card:nth-child(2n) { border-right: none; }
+  .machines-grid .machine-card:nth-child(3n) { border-right: 1px solid var(--grey-mid); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .step:nth-child(2) { border-right: none; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .admin-layout { grid-template-columns: 180px 1fr; }
+  .admin-content { padding: 32px 28px; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+
+  .hero { grid-template-columns: 1fr; grid-template-rows: auto auto; }
+  .hero-left { padding: 48px 24px 56px; min-height: 60vh; }
+  .hero-right { grid-template-rows: 200px 200px; }
+
+  .section { padding: 48px 20px; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+  .machines-grid { grid-template-columns: 1fr; border: none; }
+  .machine-card { border: 1px solid var(--grey-mid) !important; margin-bottom: -1px; }
+
+  .rooms-grid { grid-template-columns: 1fr; }
+  .room-card { border-right: none !important; border-bottom: 1px solid var(--grey-mid); }
+
+  .steps { grid-template-columns: 1fr; }
+  .step { border-right: none !important; border-bottom: 1px solid var(--grey-mid); }
+
+  .stats-bar { flex-wrap: wrap; }
+  .stat-item { min-width: 50%; border-bottom: 1px solid var(--grey-mid); }
+
+  .modal { max-width: 100%; }
+  .modal-header, .modal-body, .modal-footer { padding-left: 24px; padding-right: 24px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-info { border-right: none; border-bottom: 1px solid var(--grey-mid); padding: 40px 24px; }
+  .contact-form-wrap { padding: 40px 24px; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  footer { padding: 48px 20px 32px; }
+
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar { position: static; height: auto; display: flex; overflow-x: auto; padding: 12px 0; flex-direction: row; align-items: center; }
+  .admin-sidebar-title { display: none; }
+  .admin-nav-item { border-left: none; border-bottom: 2px solid transparent; white-space: nowrap; padding: 10px 16px; }
+  .admin-nav-item.active { border-bottom-color: var(--accent); border-left-color: transparent; }
+
+  .slots-wrap { grid-template-columns: repeat(3, 1fr); }
+  .admin-row, .admin-row-3 { grid-template-columns: 1fr; }
+  .payment-methods { flex-direction: column; }
+}
+
+/* ── ADMIN LOGIN ── */
+.admin-login-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+.admin-login-overlay.open { display: flex; }
+
+.admin-login-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 64px 56px;
+  background: var(--white);
+  position: relative;
+}
+
+.admin-login-logo {
+  font-family: var(--font-ifm);
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.admin-login-logo span:last-child {
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  color: var(--grey-dark);
+  margin-top: 4px;
+}
+
+.admin-login-title {
+  font-family: var(--font-ifm);
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.admin-login-sub {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  margin-bottom: 40px;
+}
+
+.admin-login-error {
+  background: #fce4ec;
+  color: #c62828;
+  padding: 12px 16px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: none;
+  letter-spacing: 0.05em;
+}
+.admin-login-error.show { display: block; }
+
+.admin-login-attempts {
+  font-size: 10px;
+  color: var(--grey-dark);
+  letter-spacing: 0.1em;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page.active { animation: fadeIn 0.4s ease forwards; }
+
+.machine-card, .room-card, .step {
+  animation: fadeIn 0.4s ease forwards;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" onclick="showPage('home')">
+    <span>IFM</span>
+    <span>FabLab</span>
+  </a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Accueil</a></li>
+    <li><a onclick="showPage('machines')">Machines</a></li>
+    <li><a onclick="showPage('rooms')">Rooms</a></li>
+    <li><a onclick="showPage('how')">Comment réserver</a></li>
+    <li><a onclick="showPage('contact')">Contact</a></li>
+    <li><a onclick="showPage('reservations')" class="nav-cta">Réserver →</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HOME PAGE ══════════ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">Institut Français de la Mode — Paris</p>
+      <h1 class="hero-title">IFM<br>Fab<br>Lab</h1>
+      <p class="hero-desc">Un espace de création et d'expérimentation au cœur de l'IFM. Réservez vos machines et studios en ligne, en quelques instants.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="showPage('machines')">Réserver une machine</button>
+        <button class="btn btn-secondary" onclick="showPage('rooms')">Réserver une room</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-top">
+        <div class="machine-visual machine-visual-dark">3D</div>
+        <div class="hero-badge">13 machines disponibles</div>
+      </div>
+      <div class="hero-img-bottom">
+        <div class="machine-visual machine-visual-light">✂</div>
+        <div class="hero-badge hero-badge-dark">2 studios de création</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number ifm">13</div>
+      <div class="stat-label">Machines disponibles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number ifm">2</div>
+      <div class="stat-label">Studios & Rooms</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number ifm">7j/7</div>
+      <div class="stat-label">Ouvert toute la semaine</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number ifm">QR</div>
+      <div class="stat-label">Billet numérique instantané</div>
+    </div>
+  </div>
+
+  <div class="section" style="background: var(--grey-light);">
+    <div class="section-header">
+      <div>
+        <div class="section-number">01 — Machines</div>
+        <h2 class="section-title">Équipements<br>de pointe</h2>
+      </div>
+      <button class="btn btn-secondary" onclick="showPage('machines')">Voir toutes les machines →</button>
+    </div>
+    <div class="machines-grid" style="grid-template-columns: repeat(3,1fr);">
+      <div class="machine-card" onclick="openBooking('Impression 3D coton', 'Ultimaker S5 — 330 × 240 × 300 mm', '12')">
+        <span class="machine-card-icon">🧵</span>
+        <div class="machine-card-name">Cotton 3D Print</div>
+        <div class="machine-card-desc">Impression 3D filaments coton pour prototypage textile.</div>
+        <div class="machine-card-spec">Ultimaker S5</div>
+        <div class="machine-card-cta">Réserver</div>
+      </div>
+      <div class="machine-card" onclick="openBooking('Découpe laser', 'Découpe, gravure et marquage laser', '18')">
+        <span class="machine-card-icon">⚡</span>
+        <div class="machine-card-name">Laser Cutting</div>
+        <div class="machine-card-desc">Découpe, gravure et marquage au laser haute précision.</div>
+        <div class="machine-card-spec">Découpe laser</div>
+        <div class="machine-card-cta">Réserver</div>
+      </div>
+      <div class="machine-card" onclick="openBooking('Broderie', 'Machine à broder fils et sequins ultra-rapide', '10')">
+        <span class="machine-card-icon">✦</span>
+        <div class="machine-card-name">Broderie</div>
+        <div class="machine-card-desc">Broderie de fils et sequins à grande vitesse.</div>
+        <div class="machine-card-spec">Haute fréquence</div>
+        <div class="machine-card-cta">Réserver</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-number">02 — Rooms</div>
+        <h2 class="section-title">Studios<br>créatifs</h2>
+      </div>
+      <button class="btn btn-secondary" onclick="showPage('rooms')">Voir les rooms →</button>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card" onclick="openBooking('Photo Background', 'Studio fond photographique — Bâtiment principal', '25')">
+        <div class="room-number">01</div>
+        <div class="room-content">
+          <div class="room-visual">
+            <span class="room-visual-label">BG</span>
+          </div>
+          <div class="room-type">Bâtiment principal</div>
+          <div class="room-name">Photo Background</div>
+          <div class="room-desc">Studio fond photographique situé dans la rue, au sein du bâtiment principal de l'IFM.</div>
+          <div class="room-equipment">
+            <span class="tag">Éclairage professionnel</span>
+            <span class="tag">Fond continu</span>
+            <span class="tag">Prises électriques</span>
+          </div>
+          <button class="btn btn-accent">Réserver ce studio</button>
+        </div>
+      </div>
+      <div class="room-card" onclick="openBooking('Studio Photo', 'Studio photo professionnel', '35')">
+        <div class="room-number">02</div>
+        <div class="room-content">
+          <div class="room-visual">
+            <span class="room-visual-label">📷</span>
+          </div>
+          <div class="room-type">Studio professionnel</div>
+          <div class="room-name">Studio Photo</div>
+          <div class="room-desc">Studio photo équipé pour des prises de vue professionnelles, avec éclairage modulable.</div>
+          <div class="room-equipment">
+            <span class="tag">Flash studio</span>
+            <span class="tag">Réflecteurs</span>
+            <span class="tag">Trépieds</span>
+            <span class="tag">Fond blanc / noir</span>
+          </div>
+          <button class="btn btn-accent">Réserver ce studio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background: var(--black); color: var(--white);">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px;">Réservation simplifiée</div>
+      <h2 style="font-size:clamp(40px,5vw,72px);letter-spacing:-0.03em;line-height:.95;margin-bottom:32px;">Sans compte.<br>Sans friction.</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:48px;">Sélectionnez votre équipement, choisissez votre créneau, entrez votre email, payez en ligne. Votre QR code arrive instantanément.</p>
+      <button class="btn btn-accent" onclick="showPage('how')" style="font-size:11px;letter-spacing:.2em;">Comment ça marche →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MACHINES PAGE ══════════ -->
+<div class="page" id="page-machines">
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-number">Équipements — 13 machines</div>
+        <h1 class="section-title">Nos<br>Machines</h1>
+      </div>
+    </div>
+    <div class="machines-grid" id="machines-full-grid">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ROOMS PAGE ══════════ -->
+<div class="page" id="page-rooms">
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-number">Studios — 2 espaces</div>
+        <h1 class="section-title">Nos<br>Rooms</h1>
+      </div>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card" onclick="openBooking('Photo Background', 'Studio fond photographique — Bâtiment principal', '25')">
+        <div class="room-number">01</div>
+        <div class="room-content">
+          <div class="room-visual" style="background:#e8e4dc;">
+            <span class="room-visual-label">BG</span>
+          </div>
+          <div class="room-type">Bâtiment principal · Rue</div>
+          <div class="room-name">Photo Background</div>
+          <div class="room-desc">Studio fond photographique situé dans la rue, au rez-de-chaussée du bâtiment principal. Idéal pour les shootings mode et éditorial.</div>
+          <div class="room-equipment">
+            <span class="tag">Éclairage professionnel</span>
+            <span class="tag">Fond continu coloré</span>
+            <span class="tag">Prises électriques</span>
+            <span class="tag">Vestiaire</span>
+          </div>
+          <button class="btn btn-primary" style="margin-top:16px;">Réserver ce studio</button>
+        </div>
+      </div>
+      <div class="room-card" onclick="openBooking('Studio Photo', 'Studio photo professionnel', '35')">
+        <div class="room-number">02</div>
+        <div class="room-content">
+          <div class="room-visual" style="background:#d8d4d0;">
+            <span class="room-visual-label">📸</span>
+          </div>
+          <div class="room-type">Studio professionnel</div>
+          <div class="room-name">Studio Photo</div>
+          <div class="room-desc">Studio photo entièrement équipé pour des prises de vue professionnelles. Éclairage modulable flash/continu, espace spacieux.</div>
+          <div class="room-equipment">
+            <span class="tag">Flash Elinchrom</span>
+            <span class="tag">Lumière continue LED</span>
+            <span class="tag">Réflecteurs</span>
+            <span class="tag">Trépieds</span>
+            <span class="tag">Fond blanc / noir / coloré</span>
+          </div>
+          <button class="btn btn-primary" style="margin-top:16px;">Réserver ce studio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HOW PAGE ══════════ -->
+<div class="page" id="page-how">
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-number">Processus — 8 étapes</div>
+        <h1 class="section-title">Comment<br>réserver</h1>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Choisir</div>
+        <p class="step-desc">Sélectionnez la machine ou la room que vous souhaitez réserver parmi nos équipements disponibles.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Calendrier</div>
+        <p class="step-desc">Choisissez votre date et votre créneau horaire sur le calendrier interactif. Les disponibilités sont en temps réel.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Email</div>
+        <p class="step-desc">Entrez simplement votre adresse email. Aucun compte requis, aucun mot de passe à retenir.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Paiement</div>
+        <p class="step-desc">Payez en ligne de manière sécurisée via Stripe — carte bancaire, Apple Pay ou Google Pay acceptés.</p>
+      </div>
+    </div>
+    <div class="steps" style="border-top:none;">
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-title">Confirmation</div>
+        <p class="step-desc">Votre réservation est immédiatement confirmée après le paiement.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">06</div>
+        <div class="step-title">QR Code</div>
+        <p class="step-desc">Un QR code unique est généré automatiquement et affiché à l'écran pour votre réservation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">07</div>
+        <div class="step-title">Email envoyé</div>
+        <p class="step-desc">Vous recevez par email votre ticket de réservation avec tous les détails et le QR code.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">08</div>
+        <div class="step-title">Au FabLab</div>
+        <p class="step-desc">Présentez votre QR code à l'accueil du FabLab. Il sera scanné pour valider votre accès.</p>
+      </div>
+    </div>
+    <div style="margin-top:64px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn btn-primary" onclick="showPage('machines')">Réserver une machine</button>
+      <button class="btn btn-secondary" onclick="showPage('rooms')">Réserver une room</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ CONTACT PAGE ══════════ -->
+<div class="page" id="page-contact">
+  <div class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h1 class="contact-title">Nous<br>contacter</h1>
+        <div class="contact-item">
+          <div class="contact-label">Adresse</div>
+          <div class="contact-value">Institut Français de la Mode<br>36 Quai d'Austerlitz<br>75013 Paris</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="/cdn-cgi/l/email-protection#0c6a6d6e606d6e4c656a617c6d7e657f226a7e"><span class="__cf_email__" data-cfemail="d4b2b5b6b8b5b694bdb2b9a4b5a6bda7fab2a6">[email&#160;protected]</span></a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Instagram</div>
+          <div class="contact-value"><a href="https://www.instagram.com/ifmfablab/" target="_blank">@ifmfablab</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Horaires</div>
+          <div class="contact-value">Lundi — Vendredi<br>9h00 — 18h30<br>Sur réservation uniquement</div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h2 style="font-family:var(--font-ifm);font-size:28px;letter-spacing:-0.02em;margin-bottom:40px;">Envoyer un message</h2>
+        <div class="form-group">
+          <label class="form-label">Nom complet</label>
+          <input class="form-input" type="text" placeholder="Votre nom">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" placeholder="votre@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Sujet</label>
+          <input class="form-input" type="text" placeholder="Objet de votre message">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" rows="5" placeholder="Votre message..." style="resize:vertical;"></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="showToast('Message envoyé. Nous vous répondrons sous 48h.')">Envoyer le message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ADMIN PAGE ══════════ -->
+<div class="page" id="page-admin">
+  <div class="admin-layout">
+    <div class="admin-sidebar">
+      <div class="admin-sidebar-title">Administration</div>
+      <div class="admin-nav-item active" onclick="adminSection('reservations')">
+        <span>📋</span> Réservations
+      </div>
+      <div class="admin-nav-item" onclick="adminSection('calendar')">
+        <span>📅</span> Calendrier
+      </div>
+      <div class="admin-nav-item" onclick="adminSection('machines-admin')">
+        <span>⚙️</span> Machines
+      </div>
+      <div class="admin-nav-item" onclick="adminSection('rooms-admin')">
+        <span>🏠</span> Rooms
+      </div>
+      <div class="admin-nav-item" onclick="adminSection('blocking')">
+        <span>🔒</span> Blocage créneaux
+      </div>
+      <div class="admin-nav-item" onclick="adminSection('prices')">
+        <span>💰</span> Tarifs
+      </div>
+    </div>
+    <div class="admin-content">
+
+      <!-- RESERVATIONS -->
+      <div class="admin-section active" id="admin-reservations">
+        <div class="admin-page-title">Réservations</div>
+        <div class="admin-page-sub">Gestion de toutes les réservations</div>
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Réservations récentes</div>
+            <button class="btn btn-ghost">Exporter CSV</button>
+          </div>
+          <div class="admin-card-body" style="padding:0;overflow-x:auto;">
+            <table class="reservations-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Équipement</th>
+                  <th>Date & Heure</th>
+                  <th>Email</th>
+                  <th>Montant</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="reservations-tbody">
+                <tr>
+                  <td style="font-family:monospace;font-size:11px;color:var(--grey-dark);">#IFM-001</td>
+                  <td>Laser Cutting</td>
+                  <td>15 mars 2025<br><small style="color:var(--grey-dark);">10h00 — 11h00</small></td>
+                  <td style="font-size:12px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abc6cad9c2ceebced3cac6dbc7ce85c8c4c6">[email&#160;protected]</a></td>
+                  <td>18 €</td>
+                  <td><span class="status-badge status-confirmed">✓ Confirmée</span></td>
+                  <td>
+                    <button class="btn btn-ghost" style="font-size:9px;padding:6px 12px;" onclick="showToast('Réservation annulée')">Annuler</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family:monospace;font-size:11px;color:var(--grey-dark);">#IFM-002</td>
+                  <td>Studio Photo</td>
+                  <td>16 mars 2025<br><small style="color:var(--grey-dark);">14h00 — 16h00</small></td>
+                  <td style="font-size:12px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f39996929db3968b929e839f96dd909c9e">[email&#160;protected]</a></td>
+                  <td>70 €</td>
+                  <td><span class="status-badge status-confirmed">✓ Confirmée</span></td>
+                  <td>
+                    <button class="btn btn-ghost" style="font-size:9px;padding:6px 12px;" onclick="showToast('Réservation annulée')">Annuler</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family:monospace;font-size:11px;color:var(--grey-dark);">#IFM-003</td>
+                  <td>Broderie</td>
+                  <td>17 mars 2025<br><small style="color:var(--grey-dark);">09h00 — 10h00</small></td>
+                  <td style="font-size:12px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90f1fcf9f3f5d0f5e8f1fde0fcf5bef3fffd">[email&#160;protected]</a></td>
+                  <td>10 €</td>
+                  <td><span class="status-badge status-pending">⏳ En attente</span></td>
+                  <td>
+                    <button class="btn btn-ghost" style="font-size:9px;padding:6px 12px;" onclick="showToast('Réservation annulée')">Annuler</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family:monospace;font-size:11px;color:var(--grey-dark);">#IFM-004</td>
+                  <td>Resin 3D Print</td>
+                  <td>18 mars 2025<br><small style="color:var(--grey-dark);">11h00 — 12h00</small></td>
+                  <td style="font-size:12px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4a8a1ab84a1bca5a9b4a8a1eaa7aba9">[email&#160;protected]</a></td>
+                  <td>15 €</td>
+                  <td><span class="status-badge status-cancelled">✗ Annulée</span></td>
+                  <td>
+                    <button class="btn btn-ghost" style="font-size:9px;padding:6px 12px;opacity:.4;cursor:default;">Annuler</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- CALENDAR -->
+      <div class="admin-section" id="admin-calendar">
+        <div class="admin-page-title">Calendrier</div>
+        <div class="admin-page-sub">Vue d'ensemble des réservations</div>
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Mars 2025</div>
+            <div style="display:flex;gap:8px;">
+              <button class="cal-btn">‹</button>
+              <button class="cal-btn">›</button>
+            </div>
+          </div>
+          <div class="admin-card-body">
+            <div class="admin-calendar-grid">
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Lun</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Mar</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Mer</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Jeu</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Ven</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Sam</div>
+              <div style="text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);padding:8px 0;">Dim</div>
+            </div>
+            <div class="admin-calendar-grid" id="admin-cal-grid">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MACHINES ADMIN -->
+      <div class="admin-section" id="admin-machines-admin">
+        <div class="admin-page-title">Machines</div>
+        <div class="admin-page-sub">Ajouter ou modifier les machines</div>
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Ajouter une machine</div>
+          </div>
+          <div class="admin-card-body">
+            <div class="admin-row">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Nom de la machine</label>
+                <input class="admin-form-input" type="text" placeholder="Ex: Laser Cutting Pro">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Spécification technique</label>
+                <input class="admin-form-input" type="text" placeholder="Ex: 300 × 200 × 150 mm">
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-form-label">Description</label>
+              <textarea class="admin-form-input" rows="3" placeholder="Description de la machine..."></textarea>
+            </div>
+            <div class="admin-row">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Prix par heure (€)</label>
+                <input class="admin-form-input" type="number" placeholder="15">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Icône (emoji)</label>
+                <input class="admin-form-input" type="text" placeholder="🖨️">
+              </div>
+            </div>
+            <button class="btn btn-primary" onclick="showToast('Machine ajoutée avec succès')">Ajouter la machine</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROOMS ADMIN -->
+      <div class="admin-section" id="admin-rooms-admin">
+        <div class="admin-page-title">Rooms</div>
+        <div class="admin-page-sub">Ajouter ou modifier les rooms</div>
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Modifier Room 1 — Photo Background</div>
+          </div>
+          <div class="admin-card-body">
+            <div class="admin-row">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Nom</label>
+                <input class="admin-form-input" type="text" value="Photo Background">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Localisation</label>
+                <input class="admin-form-input" type="text" value="Bâtiment principal, rue">
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-form-label">Description</label>
+              <textarea class="admin-form-input" rows="3">Studio fond photographique situé dans la rue (bâtiment principal)</textarea>
+            </div>
+            <div class="admin-row">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Prix / heure (€)</label>
+                <input class="admin-form-input" type="number" value="25">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Capacité max</label>
+                <input class="admin-form-input" type="number" value="8">
+              </div>
+            </div>
+            <button class="btn btn-primary" onclick="showToast('Modifications enregistrées')">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCKING -->
+      <div class="admin-section" id="admin-blocking">
+        <div class="admin-page-title">Blocage de créneaux</div>
+        <div class="admin-page-sub">Maintenance, périodes bloquées, récurrences</div>
+        <div class="admin-row">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div class="admin-card-title">Créneau unique</div>
+            </div>
+            <div class="admin-card-body">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Date</label>
+                <input class="admin-form-input" type="date">
+              </div>
+              <div class="admin-row">
+                <div class="admin-form-group">
+                  <label class="admin-form-label">De</label>
+                  <input class="admin-form-input" type="time" value="09:00">
+                </div>
+                <div class="admin-form-group">
+                  <label class="admin-form-label">À</label>
+                  <input class="admin-form-input" type="time" value="18:00">
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Raison</label>
+                <input class="admin-form-input" type="text" placeholder="Ex: Maintenance préventive">
+              </div>
+              <button class="btn btn-primary" onclick="showToast('Créneau bloqué avec succès')">Bloquer ce créneau</button>
+            </div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div class="admin-card-title">Récurrence hebdomadaire</div>
+            </div>
+            <div class="admin-card-body">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Jour de la semaine</label>
+                <select class="admin-form-input">
+                  <option>Lundi</option>
+                  <option>Mardi</option>
+                  <option>Mercredi</option>
+                  <option>Jeudi</option>
+                  <option>Vendredi</option>
+                  <option>Samedi</option>
+                  <option>Dimanche</option>
+                </select>
+              </div>
+              <div class="admin-row">
+                <div class="admin-form-group">
+                  <label class="admin-form-label">De</label>
+                  <input class="admin-form-input" type="time" value="09:00">
+                </div>
+                <div class="admin-form-group">
+                  <label class="admin-form-label">À</label>
+                  <input class="admin-form-input" type="time" value="12:00">
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Période (optionnel)</label>
+                <div class="admin-row">
+                  <input class="admin-form-input" type="date" placeholder="Début">
+                  <input class="admin-form-input" type="date" placeholder="Fin">
+                </div>
+              </div>
+              <button class="btn btn-primary" onclick="showToast('Récurrence configurée')">Créer la récurrence</button>
+            </div>
+          </div>
+        </div>
+        <div class="admin-card" style="margin-top:0;">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Période de maintenance</div>
+          </div>
+          <div class="admin-card-body">
+            <div class="admin-row-3">
+              <div class="admin-form-group">
+                <label class="admin-form-label">Début</label>
+                <input class="admin-form-input" type="date">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Fin</label>
+                <input class="admin-form-input" type="date">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-form-label">Machine / Room concernée</label>
+                <select class="admin-form-input">
+                  <option>Toutes les machines</option>
+                  <option>Laser Cutting</option>
+                  <option>Cotton 3D Print</option>
+                  <option>Studio Photo</option>
+                  <option>Photo Background</option>
+                </select>
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-form-label">Note de maintenance</label>
+              <textarea class="admin-form-input" rows="2" placeholder="Description de la maintenance..."></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="showToast('Période de maintenance enregistrée')">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICES -->
+      <div class="admin-section" id="admin-prices">
+        <div class="admin-page-title">Tarifs</div>
+        <div class="admin-page-sub">Gérer les prix par équipement</div>
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Prix par heure — Machines</div>
+          </div>
+          <div class="admin-card-body">
+            <div id="prices-list">
+              <!-- Injected by JS -->
+            </div>
+            <button class="btn btn-primary" onclick="showToast('Tarifs mis à jour')">Enregistrer les tarifs</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end admin-content -->
+  </div>
+</div>
+
+<!-- ══════════ BOOKING MODAL ══════════ -->
+<div class="modal-overlay" id="booking-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-subtitle" id="modal-subtitle">Réservation</div>
+        <div class="modal-title" id="modal-title">Laser Cutting</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="booking-steps">
+        <div class="bs active" id="bs1"></div>
+        <div class="bs" id="bs2"></div>
+        <div class="bs" id="bs3"></div>
+        <div class="bs" id="bs4"></div>
+      </div>
+
+      <!-- Step 1: Calendar -->
+      <div id="step-1">
+        <div class="step-label">Étape 1 — Choisir une date</div>
+        <div class="calendar-wrap">
+          <div class="calendar-nav">
+            <button class="cal-btn" onclick="prevMonth()">‹</button>
+            <div class="calendar-month" id="cal-month-display">Mars 2025</div>
+            <button class="cal-btn" onclick="nextMonth()">›</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-day-header">L</div>
+            <div class="cal-day-header">M</div>
+            <div class="cal-day-header">M</div>
+            <div class="cal-day-header">J</div>
+            <div class="cal-day-header">V</div>
+            <div class="cal-day-header">S</div>
+            <div class="cal-day-header">D</div>
+            <div id="calendar-days"></div>
+          </div>
+        </div>
+        <div id="slots-container" style="display:none;">
+          <div class="step-label">Choisir un créneau horaire</div>
+          <div class="slots-wrap" id="slots-grid"></div>
+        </div>
+      </div>
+
+      <!-- Step 2: Email -->
+      <div id="step-2" style="display:none;">
+        <div class="step-label">Étape 2 — Votre email</div>
+        <div class="form-group">
+          <label class="form-label">Adresse email</label>
+          <input class="form-input" type="email" id="booking-email" placeholder="votre@email.com">
+        </div>
+        <p style="font-size:11px;color:var(--grey-dark);line-height:1.6;">Votre confirmation de réservation et votre QR code seront envoyés à cette adresse.</p>
+      </div>
+
+      <!-- Step 3: Payment -->
+      <div id="step-3" style="display:none;">
+        <div class="step-label">Étape 3 — Paiement sécurisé</div>
+        <div class="payment-summary" id="payment-summary">
+          <!-- Injected -->
+        </div>
+        <div class="payment-methods">
+          <div class="pay-method selected" onclick="selectPayMethod(this)">💳 Carte bancaire</div>
+          <div class="pay-method" onclick="selectPayMethod(this)"> Apple Pay</div>
+          <div class="pay-method" onclick="selectPayMethod(this)">G Pay</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Numéro de carte</label>
+          <input class="form-input" type="text" placeholder="4242 4242 4242 4242" id="card-number" maxlength="19" oninput="formatCard(this)">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group">
+            <label class="form-label">Expiration</label>
+            <input class="form-input" type="text" placeholder="MM/AA" maxlength="5">
+          </div>
+          <div class="form-group">
+            <label class="form-label">CVV</label>
+            <input class="form-input" type="text" placeholder="···" maxlength="3">
+          </div>
+        </div>
+        <div class="stripe-badge">
+          <span class="stripe-icon">🔒</span>
+          Paiement sécurisé par <strong>Stripe</strong>
+        </div>
+      </div>
+
+      <!-- Step 4: Confirmation -->
+      <div id="step-4" style="display:none;">
+        <div class="confirmation-wrap">
+          <div class="qr-code-wrap">
+            <canvas id="qr-canvas" width="160" height="160"></canvas>
+          </div>
+          <div class="confirm-title">Réservation confirmée</div>
+          <p class="confirm-desc">Votre réservation est confirmée. Votre QR code a été envoyé par email. Présentez-le à l'accueil du FabLab.</p>
+          <div class="confirm-details" id="confirm-details">
+            <!-- Injected -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" id="btn-prev" style="display:none;" onclick="prevStep()">← Retour</button>
+      <button class="btn btn-primary" id="btn-next" onclick="nextStep()">Choisir un créneau →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN OVERLAY -->
+<div class="admin-login-overlay" id="admin-login-overlay">
+  <div class="admin-login-box">
+    <div class="admin-login-logo">
+      <span>IFM FabLab</span>
+      <span>Administration</span>
+    </div>
+    <div class="admin-login-title">Connexion</div>
+    <div class="admin-login-sub">Accès réservé au personnel IFM</div>
+    <div class="admin-login-error" id="login-error">Identifiants incorrects. Réessayez.</div>
+    <div class="form-group">
+      <label class="form-label">Identifiant</label>
+      <input class="form-input" type="text" id="login-user" placeholder="Identifiant" autocomplete="username">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mot de passe</label>
+      <input class="form-input" type="password" id="login-pass" placeholder="••••••••••" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter') doLogin()">
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="doLogin()">
+      Connexion →
+    </button>
+    <div class="admin-login-attempts" id="login-attempts"></div>
+    <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--grey-mid);">
+      <a onclick="closeAdminLogin()" style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--grey-dark);cursor:pointer;text-decoration:none;">
+        ← Retour au site
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-col">
+      <span class="footer-logo">IFM FabLab</span>
+      <span class="footer-logo-sub">Institut Français de la Mode</span>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/ifmfablab/" target="_blank" title="Instagram @ifmfablab" aria-label="Instagram IFM FabLab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">Accueil</a></li>
+        <li><a href="#/machines">Machines</a></li>
+        <li><a href="#/rooms">Rooms</a></li>
+        <li><a href="#/how">Comment réserver</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Équipements</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('machines')">Impression 3D</a></li>
+        <li><a onclick="showPage('machines')">Découpe laser</a></li>
+        <li><a onclick="showPage('machines')">Broderie</a></li>
+        <li><a onclick="showPage('machines')">Sublimation</a></li>
+        <li><a onclick="showPage('machines')">DTG</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a>36 Quai d'Austerlitz</a></li>
+        <li><a>75013 Paris</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#c1a7a0a3ada0a381a8a7acb1a0b3a8b2efa7b3"><span class="__cf_email__" data-cfemail="2c4a4d4e404d4e6c454a415c4d5e455f024a5e">[email&#160;protected]</span></a></li>
+        <li><a href="https://www.instagram.com/ifmfablab/" target="_blank">@ifmfablab</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 IFM FabLab — Institut Français de la Mode</div>
+    <div class="footer-tagline">Create. Make. Fabricate.</div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── DATA ──
+const MACHINES = [
+  { name: 'Cotton 3D Print', desc: 'Impression 3D filaments coton pour prototypage textile et création mode.', spec: 'Ultimaker S5 — 330 × 240 × 300 mm', price: '12', icon: '🧵' },
+  { name: 'Cutting Plotter', desc: 'Découpe papier, vinyle et cuir avec une lame de haute précision.', spec: 'Découpe fine haute précision', price: '8', icon: '✂️' },
+  { name: 'Denim 3D Print', desc: 'Impression 3D grande capacité pour matériaux denim et fibres naturelles.', spec: 'Creality K2 Plus — 350 × 350 × 350 mm', price: '14', icon: '🔵' },
+  { name: 'Direct to Garment', desc: 'Impression directe sur tissus organiques et vêtements finaux.', spec: 'Impression textile organique', price: '16', icon: '👕' },
+  { name: 'Broderie', desc: 'Machine à broder fils et sequins à très grande vitesse pour finitions premium.', spec: 'Broderie haute fréquence', price: '10', icon: '✦' },
+  { name: 'Jersey 3D Print', desc: 'Impression 3D sur matières élastiques type jersey pour la mode.', spec: 'Ultimaker 3 — 215 × 197 × 200 mm', price: '11', icon: '🎽' },
+  { name: 'Laser Cutting', desc: 'Découpe, gravure et marquage laser sur multiples matériaux.', spec: 'Découpe, gravure, marquage', price: '18', icon: '⚡' },
+  { name: 'Resin 3D Print', desc: 'Impression résine haute définition pour détails ultra-précis.', spec: 'max. L 218 × P 123 × H 250 mm', price: '15', icon: '💎' },
+  { name: 'Silk 3D Print', desc: 'Impression 3D filaments soie pour pièces mode à texture premium.', spec: 'Ultimaker S5 — 330 × 240 × 300 mm', price: '13', icon: '🌟' },
+  { name: 'Sublimation Grand Format', desc: 'Impression sublimation grand format sur papier transfert polyester.', spec: 'Grand format — transfert thermique', price: '20', icon: '🖨️' },
+  { name: 'Sublimation Petit Format', desc: 'Impression sublimation petit format sur papier transfert polyester.', spec: 'Petit format — transfert thermique', price: '10', icon: '📄' },
+  { name: 'Velvet 3D Print', desc: 'Impression 3D sur matières velours pour textures douces et luxueuses.', spec: 'Ultimaker 3 — 215 × 197 × 200 mm', price: '11', icon: '🟣' },
+  { name: 'Wool 3D Print', desc: 'Impression 3D filaments laine pour pièces textiles chaudes et écologiques.', spec: 'Creality K2 Plus — 350 × 350 × 350 mm', price: '12', icon: '🐑' },
+];
+
+// ── RENDER MACHINES ──
+function renderMachines() {
+  const grid = document.getElementById('machines-full-grid');
+  if (!grid) return;
+  grid.innerHTML = MACHINES.map(m => `
+    <div class="machine-card" onclick="openBooking('${m.name}', '${m.spec}', '${m.price}')">
+      <span class="machine-card-icon">${m.icon}</span>
+      <div class="machine-card-name">${m.name}</div>
+      <div class="machine-card-desc">${m.desc}</div>
+      <div class="machine-card-spec">${m.spec}</div>
+      <div class="machine-card-cta">Réserver</div>
+    </div>
+  `).join('');
+
+  const pricesList = document.getElementById('prices-list');
+  if (pricesList) {
+    pricesList.innerHTML = MACHINES.map(m => `
+      <div class="admin-row" style="margin-bottom:8px;align-items:center;">
+        <div style="font-size:13px;display:flex;align-items:center;gap:10px;"><span>${m.icon}</span> ${m.name}</div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <input class="admin-form-input" type="number" value="${m.price}" style="width:100px;">
+          <span style="font-size:11px;color:var(--grey-dark);">€ / heure</span>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+// ── PAGE NAV ──
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+}
+
+// ── ADMIN SECTIONS ──
+function adminSection(id) {
+  document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.admin-nav-item').forEach(n => n.classList.remove('active'));
+  const target = document.getElementById('admin-' + id);
+  if (target) target.classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ── BOOKING STATE ──
+let bookingState = {
+  machine: '', spec: '', price: '',
+  date: null, slot: null, email: '',
+  step: 1
+};
+const _now = new Date();
+let calYear = _now.getFullYear(), calMonth = _now.getMonth();
+
+function openBooking(machine, spec, price) {
+  bookingState = { machine, spec, price, date: null, slot: null, email: '', step: 1 };
+  document.getElementById('modal-title').textContent = machine;
+  document.getElementById('modal-subtitle').textContent = spec;
+  document.getElementById('booking-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderCalendar();
+  setStep(1);
+}
+
+function closeModal() {
+  document.getElementById('booking-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('booking-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ── CALENDAR ──
+const MONTHS_FR = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+
+function renderCalendar() {
+  const now = new Date();
+  const display = document.getElementById('cal-month-display');
+  if (display) display.textContent = MONTHS_FR[calMonth] + ' ' + calYear;
+
+  const firstDay = new Date(calYear, calMonth, 1).getDay();
+  const offset = firstDay === 0 ? 6 : firstDay - 1;
+  const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+
+  const container = document.getElementById('calendar-days');
+  if (!container) return;
+
+  let html = '';
+  // Empty cells
+  for (let i = 0; i < offset; i++) {
+    html += '<div class="cal-day empty"></div>';
+  }
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(calYear, calMonth, d);
+    const isPast = date < new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const isToday = date.toDateString() === now.toDateString();
+    const isSelected = bookingState.date && bookingState.date.toDateString() === date.toDateString();
+    const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+    let cls = 'cal-day';
+    if (isPast) cls += ' past';
+    else if (isWeekend) cls += ' blocked';
+    if (isToday) cls += ' today';
+    if (isSelected) cls += ' selected';
+    html += `<div class="${cls}" onclick="selectDate(${d})">${d}</div>`;
+  }
+  container.innerHTML = html;
+}
+
+function selectDate(d) {
+  const date = new Date(calYear, calMonth, d);
+  const now = new Date();
+  if (date < new Date(now.getFullYear(), now.getMonth(), now.getDate())) return;
+  if (date.getDay() === 0 || date.getDay() === 6) return;
+  bookingState.date = date;
+  bookingState.slot = null;
+  renderCalendar();
+  renderSlots();
+  document.getElementById('slots-container').style.display = 'block';
+  updateNextBtn();
+}
+
+function prevMonth() {
+  calMonth--;
+  if (calMonth < 0) { calMonth = 11; calYear--; }
+  renderCalendar();
+}
+
+function nextMonth() {
+  calMonth++;
+  if (calMonth > 11) { calMonth = 0; calYear++; }
+  renderCalendar();
+}
+
+function renderSlots() {
+  const slots = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+  const bookedSlots = ['10:00','14:00','15:00'];
+  const grid = document.getElementById('slots-grid');
+  if (!grid) return;
+  grid.innerHTML = slots.map(s => {
+    const isBooked = bookedSlots.includes(s);
+    const isSelected = bookingState.slot === s;
+    let cls = 'slot';
+    if (isBooked) cls += ' booked';
+    if (isSelected) cls += ' selected';
+    return `<div class="${cls}" onclick="${isBooked ? '' : `selectSlot('${s}')`}">${s}<br><small style="font-size:10px;opacity:.6;">— ${parseInt(s)+1}:00</small></div>`;
+  }).join('');
+}
+
+function selectSlot(slot) {
+  bookingState.slot = slot;
+  renderSlots();
+  updateNextBtn();
+}
+
+// ── BOOKING STEPS ──
+function setStep(n) {
+  bookingState.step = n;
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('step-' + i).style.display = i === n ? 'block' : 'none';
+    const bs = document.getElementById('bs' + i);
+    bs.className = 'bs' + (i < n ? ' done' : i === n ? ' active' : '');
+  }
+  document.getElementById('btn-prev').style.display = n > 1 && n < 4 ? 'flex' : 'none';
+
+  const btnNext = document.getElementById('btn-next');
+  if (n === 1) { btnNext.textContent = 'Saisir mon email →'; btnNext.style.display = 'flex'; }
+  else if (n === 2) { btnNext.textContent = 'Procéder au paiement →'; btnNext.style.display = 'flex'; }
+  else if (n === 3) { btnNext.textContent = 'Confirmer et payer →'; btnNext.style.display = 'flex'; }
+  else if (n === 4) { btnNext.textContent = 'Fermer'; btnNext.style.display = 'flex'; }
+
+  if (n === 3) renderPaymentSummary();
+  if (n === 4) renderConfirmation();
+}
+
+function updateNextBtn() {
+  const ok = bookingState.date && bookingState.slot;
+  document.getElementById('btn-next').style.opacity = ok ? '1' : '.4';
+}
+
+function nextStep() {
+  const s = bookingState.step;
+  if (s === 4) { closeModal(); return; }
+  if (s === 1) {
+    if (!bookingState.date || !bookingState.slot) {
+      showToast('Veuillez sélectionner une date et un créneau');
+      return;
+    }
+    setStep(2);
+  } else if (s === 2) {
+    const email = document.getElementById('booking-email').value;
+    if (!email || !email.includes('@')) {
+      showToast('Veuillez entrer une adresse email valide');
+      return;
+    }
+    bookingState.email = email;
+    setStep(3);
+  } else if (s === 3) {
+    setStep(4);
+  }
+}
+
+function prevStep() {
+  if (bookingState.step > 1) setStep(bookingState.step - 1);
+}
+
+function renderPaymentSummary() {
+  const d = bookingState.date;
+  const dateStr = d ? d.toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'}) : '';
+  document.getElementById('payment-summary').innerHTML = `
+    <div class="payment-line"><span style="color:var(--grey-dark);font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Équipement</span><span>${bookingState.machine}</span></div>
+    <div class="payment-line"><span style="color:var(--grey-dark);font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Date</span><span>${dateStr}</span></div>
+    <div class="payment-line"><span style="color:var(--grey-dark);font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Créneau</span><span>${bookingState.slot} — ${parseInt(bookingState.slot)+1}:00</span></div>
+    <div class="payment-line"><span>Total</span><span>${bookingState.price} €</span></div>
+  `;
+}
+
+function renderConfirmation() {
+  const d = bookingState.date;
+  const dateStr = d ? d.toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'}) : '';
+  const id = 'IFM-' + Math.random().toString(36).substr(2,6).toUpperCase();
+  document.getElementById('confirm-details').innerHTML = `
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Référence</span>
+      <span class="confirm-detail-value" style="font-size:13px;font-family:monospace;">#${id}</span>
+    </div>
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Équipement</span>
+      <span class="confirm-detail-value">${bookingState.machine}</span>
+    </div>
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Date</span>
+      <span class="confirm-detail-value">${dateStr}</span>
+    </div>
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Créneau</span>
+      <span class="confirm-detail-value">${bookingState.slot} — ${parseInt(bookingState.slot)+1}:00</span>
+    </div>
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Email</span>
+      <span class="confirm-detail-value" style="font-size:13px;">${bookingState.email}</span>
+    </div>
+    <div class="confirm-detail-item">
+      <span class="confirm-detail-label">Montant payé</span>
+      <span class="confirm-detail-value">${bookingState.price} €</span>
+    </div>
+  `;
+  drawQR(id);
+}
+
+// ── QR CODE GENERATOR ──
+function drawQR(id) {
+  const canvas = document.getElementById('qr-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const size = 160;
+  canvas.width = size;
+  canvas.height = size;
+
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, size, size);
+
+  const data = 'IFM-FABLAB:' + id + ':' + (bookingState.machine||'').replace(/\s/g,'-') + ':' + (bookingState.slot||'');
+  const n = 21;
+  const mod = size / n;
+
+  // Seeded pseudo-random for consistent QR look
+  let seed = data.split('').reduce((a,c)=>a+c.charCodeAt(0),0);
+  function rand() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+
+  const matrix = [];
+  for (let r = 0; r < n; r++) {
+    matrix[r] = [];
+    for (let c = 0; c < n; c++) {
+      matrix[r][c] = rand() > 0.5 ? 1 : 0;
+    }
+  }
+
+  // Finder patterns
+  function finder(r, c) {
+    for (let dr = 0; dr < 7; dr++) {
+      for (let dc = 0; dc < 7; dc++) {
+        const onBorder = dr===0||dr===6||dc===0||dc===6;
+        const onInner = dr>=2&&dr<=4&&dc>=2&&dc<=4;
+        matrix[r+dr][c+dc] = (onBorder||onInner) ? 1 : 0;
+      }
+    }
+  }
+  finder(0,0); finder(0,n-7); finder(n-7,0);
+
+  ctx.fillStyle = '#0a0a0a';
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c < n; c++) {
+      if (matrix[r][c]) {
+        ctx.fillRect(Math.round(c*mod), Math.round(r*mod), Math.floor(mod)-1, Math.floor(mod)-1);
+      }
+    }
+  }
+
+  // IFM logo in center
+  ctx.fillStyle = '#ffffff';
+  const cx = size/2, cy = size/2, pw = 36, ph = 18;
+  ctx.fillRect(cx-pw/2, cy-ph/2, pw, ph);
+  ctx.fillStyle = '#0a0a0a';
+  ctx.font = 'bold 11px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('IFM', cx, cy);
+}
+
+function selectPayMethod(el) {
+  document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function formatCard(input) {
+  let v = input.value.replace(/\D/g, '');
+  v = v.match(/.{1,4}/g)?.join(' ') || v;
+  input.value = v;
+}
+
+// ── TOAST ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+// ── ADMIN CALENDAR ──
+function renderAdminCalendar() {
+  const grid = document.getElementById('admin-cal-grid');
+  if (!grid) return;
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDay = new Date(year, month, 1).getDay();
+  const offset = firstDay === 0 ? 6 : firstDay - 1;
+  const bookedDays = [3,5,10,12,15,17,20,22];
+  const blockedDays = [8,9,29,30];
+  let html = '';
+  for (let i = 0; i < offset; i++) html += '<div></div>';
+  for (let d = 1; d <= daysInMonth; d++) {
+    const isBooked = bookedDays.includes(d);
+    const isBlocked = blockedDays.includes(d);
+    let cls = 'admin-cal-day';
+    if (isBlocked) cls += ' blocked-day';
+    else if (isBooked) cls += ' has-bookings';
+    html += `<div class="${cls}">${d}${isBooked ? '<div class="dot"></div>' : ''}</div>`;
+  }
+  grid.innerHTML = html;
+}
+
+// ── ADMIN AUTH ──
+let loginAttempts = 0;
+let lockoutUntil = 0;
+
+async function doLogin() {
+  const now = Date.now();
+  if (now < lockoutUntil) {
+    const secs = Math.ceil((lockoutUntil - now) / 1000);
+    document.getElementById('login-attempts').textContent = `Compte bloqué. Réessayez dans ${secs}s`;
+    return;
+  }
+
+  const user = document.getElementById('login-user').value.trim();
+  const pass = document.getElementById('login-pass').value;
+
+  const validUser = user === 'ifmfablab';
+  const validPass = pass === 'IFM@FabLab#2025!';
+
+  if (validUser && validPass) {
+    loginAttempts = 0;
+    sessionStorage.setItem('ifm_admin_auth', 'granted_' + Date.now());
+    document.getElementById('admin-login-overlay').classList.remove('open');
+    document.getElementById('login-error').classList.remove('show');
+    document.getElementById('login-pass').value = '';
+    document.getElementById('login-attempts').textContent = '';
+    showPage('admin');
+    window.location.hash = '/admin';
+  } else {
+    loginAttempts++;
+    document.getElementById('login-error').classList.add('show');
+    document.getElementById('login-pass').value = '';
+    if (loginAttempts >= 3) {
+      lockoutUntil = Date.now() + 30000;
+      document.getElementById('login-attempts').textContent = 'Trop de tentatives. Bloqué 30 secondes.';
+      setTimeout(() => {
+        document.getElementById('login-attempts').textContent = '';
+        loginAttempts = 0;
+      }, 30000);
+    } else {
+      document.getElementById('login-attempts').textContent = `Tentative ${loginAttempts}/3`;
+    }
+  }
+}
+
+function openAdminLogin() {
+  document.getElementById('admin-login-overlay').classList.add('open');
+  document.getElementById('login-error').classList.remove('show');
+  document.getElementById('login-user').value = '';
+  document.getElementById('login-pass').value = '';
+  document.getElementById('login-attempts').textContent = '';
+  setTimeout(() => document.getElementById('login-user').focus(), 100);
+}
+
+function closeAdminLogin() {
+  document.getElementById('admin-login-overlay').classList.remove('open');
+  window.location.hash = '';
+}
+
+function requireAdmin() {
+  const auth = sessionStorage.getItem('ifm_admin_auth');
+  if (auth && auth.startsWith('granted_')) {
+    showPage('admin');
+  } else {
+    openAdminLogin();
+  }
+}
+
+// ── URL ROUTING ──
+function handleRoute() {
+  const hash = window.location.hash;
+  if (hash === '#/admin') {
+    requireAdmin();
+  } else if (hash === '#/machines') {
+    showPage('machines');
+  } else if (hash === '#/rooms') {
+    showPage('rooms');
+  } else if (hash === '#/contact') {
+    showPage('contact');
+  } else if (hash === '#/how') {
+    showPage('how');
+  } else {
+    // only go home if not already on a page
+    const anyActive = document.querySelector('.page.active');
+    if (!anyActive || anyActive.id === '') showPage('home');
+  }
+}
+
+window.addEventListener('hashchange', handleRoute);
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', () => {
+  renderMachines();
+  renderAdminCalendar();
+  updateNextBtn();
+  renderCalendar();
+
+  // Check if URL has a route
+  if (window.location.hash) {
+    handleRoute();
+  }
+});
+</script>
+</body>
+</html>
